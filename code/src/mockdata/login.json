@@ -1,0 +1,17 @@
+================================================
+Requirement: 
+Description: Send user login information to DB
+================================================
+
+
+HTTP method: POST
+Route: /api/games/:game_id/questions
+
+// User login object sent to back end to store in the DB
+
+User = {
+    id: "here_is_an_id"
+    email: "here_is_an_email"
+    username: "here_is_a_user_name"
+    passowrd: "here_is_a_password"
+}
