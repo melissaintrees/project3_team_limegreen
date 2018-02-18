@@ -1,0 +1,17 @@
+================================================
+Requirement: 
+Description: Send user login information to DB
+================================================
+
+HTTP method: POST
+// Back end please enter route below
+Route:
+
+// Object posted to DB
+User = {
+    userid: "here_is_an_id",
+    email: "here_is_an_email",
+    userName: "here_is_a_user_name",
+    password: "here_is_a_password",
+    userScore: integer
+}
