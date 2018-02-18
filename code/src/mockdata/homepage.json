@@ -1,31 +1,13 @@
 ================================================
 Requirement: 
-Description: Get a list of categories and then questions for the game
+Description: Get a list of categories 
 ================================================
 
 HTTP method: GET
-Route: /api/games/:game_id/questions
+// Back end please enter route below
+Route:
 
-// return an array that lists all possible categories
+// Object returned from back end
 
 const categories ['html', 'css', 'looping', 'functions']
 
-
-// Route that will return questions for each category in the form of a json object
-
-const css {
-    questions: [
-        {
-            type: "multiple choice"
-            question1: "What is CSS?"
-            answers: ["How we add style to page", "The structure we build code onto", "Some random letters", "It stands for Cool-Singing-Sheep"]
-            correct answer: [0]
-        },
-        {
-            type: "matching"
-            question: "What will the following code do?"
-            questionimage: 
-            answers: []
-        }
-    ]
-}
