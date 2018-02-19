@@ -5,11 +5,12 @@ let con;
 if(process.env.JAWSDB_URL){
   con = mysql.createConnection(process.env.JAWSDB_URL);
 }
+
 else{
   con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Myfavri0te21",
+    password: "*******",
     database: "ticketMaster"
   })
 }

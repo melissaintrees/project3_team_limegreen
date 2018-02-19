@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-let mysql = require('mysql')
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 8000;
