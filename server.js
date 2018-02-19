@@ -1,9 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+let mysql = require('mysql')
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
