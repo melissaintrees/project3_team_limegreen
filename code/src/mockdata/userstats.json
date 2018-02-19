@@ -1,0 +1,33 @@
+================================================
+Requirement: 
+Description: Get user stats stored in DB
+================================================
+
+HTTP method: GET
+// Back end please enter route below:
+Route:
+
+// Object returned from back end
+const currentUserScore {
+    total: integer,
+}
+
+// Object returned from back end showing all username and score combinations
+const allUsersScores {
+    {
+        user: "user name"
+        score: "user score"
+    },
+    {
+        user: "user name"
+        score: "user score"
+    },
+    {
+        user: "user name"
+        score: "user score"
+    },
+    {
+        user: "user name"
+        score: "user score"
+    },
+}
