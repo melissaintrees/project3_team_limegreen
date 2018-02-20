@@ -12,7 +12,7 @@ router.post("/login", function(req, res) {
     users(req.body.username, req.body.password, cb, res);
 });
 
-router.get("/signup/:username/:password", function(req, res) {
+router.post("/signup", function(req, res) {
     newUser(req.body.username, req.body.password, cb, res);
   });
 
