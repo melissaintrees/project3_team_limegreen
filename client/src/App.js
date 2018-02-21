@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import gameQuestions from './mockdata/gameQuestions';
+import gameApp from './components/GameApp';
+
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+  
+    renderGame() {
+      return (
+        <Game
+          answer={this.state.answer}
+          answerOptions={this.state.answerOptions}
+          questionId={this.state.questionId}
+          question={this.state.question}
+          questionTotal={gameQuestions.length}
+          onAnswerSelected={this.handleAnswerSelected}
+        />
+      );
+    }
+  
+    render() {
+      return (
+        <div className="App">
+          <div className="App-header">
+            <h2>Code Aquarium</h2>
+          </div>
+          {this.state.result ? this.renderResult() : this.renderGame()}
+        </div>
+      );
+    }
+  
   }
-}
-
-export default App;
+  
+  export default App;
