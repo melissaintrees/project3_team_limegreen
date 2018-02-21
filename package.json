@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "bcrypt": "*",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "jsonwebtoken": "^8.1.1",
