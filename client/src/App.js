@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import update from 'react-addons-update';
 import gameQuestions from './mockdata/gameQuestions';
 import gameApp from './components/GameApp';
 
@@ -19,12 +18,6 @@ class App extends Component {
       );
     }
   
-    // renderResult() {
-    //   return (
-    //     <Result GameResult={this.state.result} />
-    //   );
-    // }
-  
     render() {
       return (
         <div className="App">
@@ -39,4 +32,3 @@ class App extends Component {
   }
   
   export default App;
-  
