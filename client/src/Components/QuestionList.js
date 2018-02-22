@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Component to compile questions
 const QuestionList = ({ questions, handleAnswerClick }) => {
     return (
       <div className="question-list">
@@ -16,5 +17,10 @@ const QuestionList = ({ questions, handleAnswerClick }) => {
       </div>
     );
   }
+
+    QuestionList.propTypes = {
+      questions: PropTypes.array.isRequired,
+      handleAnswerClick: PropTypes.func.isRequired
+    };
 
 export default QuestionList;

@@ -5,7 +5,7 @@ const Question = ({ cssCategory }) => {
   return (
     <div className="question">
       <video>
-        <source src={lesson video} />
+        <source src={lessonVideo} />
       </video>
     <ol className="question">
       <h2 className="question-title">
