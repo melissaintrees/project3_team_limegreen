@@ -5,9 +5,12 @@ import Question from './Question';
 import { questions } from '../mockdata/gameQuestions';
 
 
-// Component to compile game
-const Game = ({}) => {
+// 
+class GameApp extends Component {
 
-};
+}
 
-export default Game;
+
+
+// Take component's generated HTML and put it in the DOM
+ReactDOM.render(<Game />, document.querySelector('.container'));
