@@ -7,7 +7,7 @@ class App extends Component {
   
     renderGame() {
       return (
-        <Game
+        <GameApp
           answer={this.state.answer}
           answerOptions={this.state.answerOptions}
           questionId={this.state.questionId}

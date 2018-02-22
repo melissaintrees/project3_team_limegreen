@@ -13,8 +13,8 @@ else{
     password: "Myfavri0te21",
     database: "futureCoders"
   })
-}
-
+} 
+//msm password: cr8lifenow222
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");

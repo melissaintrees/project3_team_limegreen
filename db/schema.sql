@@ -1,4 +1,5 @@
 ### Schema
+CREATE DATABASE IF NOT EXISTS futureCoders;
 
 USE futureCoders;
 
