@@ -7,7 +7,10 @@ import { questions } from '../mockdata/gameQuestions';
 
 // 
 class GameApp extends Component {
+    constructor(props) {
+        super(props);
 
+        
 }
 
 

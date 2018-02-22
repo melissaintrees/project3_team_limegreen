@@ -4,6 +4,8 @@ import gameApp from './components/GameApp';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
   
     renderGame() {
       return (
