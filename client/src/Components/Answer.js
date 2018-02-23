@@ -4,16 +4,16 @@ import  questions from '../mockdata/gameQuestions';
 
 // Answer component for quiz. Creates radio button selection.
 const Answer = (props) =>
-    <li className="answerOption">
-            <h2
+    <ol className="answerOption">
+            <input
             type="radio"
             className="radioCustomButton"
             name="radioGroup"
             >
-            {props.value}
-            </h2>
+            </input>
         <label className="radioCustom">
+        {props.value}
       </label>
-    </li>;
+    </ol>;
 
 export default Answer;
