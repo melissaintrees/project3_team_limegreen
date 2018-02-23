@@ -13,17 +13,18 @@ class GameApp extends Component {
 
         this.state = {
             question: "here",
-            answers: "testing"
+            answer: "testing"
         };
     }
 
     getAnswer() {
         axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/1')
-        .then(function (response) {
-          console.log(response);
+        .then((response)=> {
+          console.log(response.data[0].questions);
+          console.log(response.data[0].answer0);
           this.setState({
-
-            //   question: response.questions
+          question: response.data[0].questions,
+          answer: response.data[0].answer0
           });
         })
         .catch(function (error) {
@@ -34,7 +35,7 @@ class GameApp extends Component {
     componentDidMount() {
         this.setState({
             question: "Hello World",
-            answers: "Nothing"
+            answer: "Nothing"
         });
     };
 
@@ -47,6 +48,11 @@ class GameApp extends Component {
                  value={this.state.question}
                 />
                 </h1>
+                <h2>
+                <Answer
+                value={this.state.answer}
+                />
+                </h2>
             </div>
 
         );

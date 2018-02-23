@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import  questions from '../mockdata/gameQuestions';
 
 // Answer component for quiz. Creates radio button selection.
-const Answer = ({ answers, props }) => {
+const Answer = (props) =>
     <li className="answerOption">
-            <input
+            <h2
             type="radio"
             className="radioCustomButton"
             name="radioGroup"
-            value="Here is a value"
-            />
+            >
+            {props.value}
+            </h2>
         <label className="radioCustom">
       </label>
-    </li>
-};
+    </li>;
 
 export default Answer;
