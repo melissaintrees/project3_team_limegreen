@@ -26,7 +26,6 @@ export const cssCategory = {
             correctAnswer: 1
         }
     ]
-}
+};
 
-
-
+export default cssCategory;

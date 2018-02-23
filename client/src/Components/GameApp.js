@@ -2,37 +2,67 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Answer from './Answer';
 import Question from './Question';
-import { questions } from '../mockdata/gameQuestions';
+import  questions from '../mockdata/gameQuestions';
+import axios from 'axios';
+import AdvanceBtn from './AdvanceBtn/AdvanceBtn'
 
+// GameApp runs game logic
+class GameApp extends Component {    
+    constructor(props) {
+        super(props);
 
-// 
-class GameApp extends Component {
+        this.state = {
+            question: "here",
+            answer: "testing"
+        };
+    }
 
-
-    handleAnswerClick(e) {
-        const { questions, step, userAnswers } = this.state;
-        const isCorrect = questions[0].answers[questions[0].correctAnswer - 1] === e.target.innerText;
-        const answersFromUser = userAnswers.slice();
-        const currentStep = step - 1;
-        const tries = answersFromUser[currentStep].tries;
-    
-        if (isCorrect) {
-    
-          document.querySelector('.question:first-child').style.pointerEvents = 'none';
-    
-          e.target.classList.add('right');
-    
-          answersFromUser[currentStep] = {
-            tries: tries + 1
-          };
-    
+    getAnswer() {
+        axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/1')
+        .then((response)=> {
+          console.log(response.data[0].questions);
+          console.log(response.data[0].answer0);
           this.setState({
-            userAnswers: answersFromUser
+          question: response.data[0].questions,
+          answer: response.data[0].answer0
           });
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      };
 
-}
+    componentDidMount() {
+        this.setState({
+            question: "Hello World",
+            answer: "Nothing"
+        });
+    };
 
+    render() {
+        return (
+            <div>
+                <AdvanceBtn onClick={() => this.getAnswer()} />
+                <h1>
+                <Question 
+                 value={this.state.question}
+                />
+                </h1>
+                <h2>
+                <Answer
+                value={this.state.answer}
+                />
+                </h2>
+            </div>
 
+        );
+    };
+    
+    
+// End GameApp    
+};
+
+export default GameApp;
 
 // Take component's generated HTML and put it in the DOM
-ReactDOM.render(<GameApp />, document.querySelector('.container'));
+// ReactDOM.render(<GameApp />, document.querySelector('.container'));
