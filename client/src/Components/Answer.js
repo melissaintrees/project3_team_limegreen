@@ -1,31 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import  questions from '../mockdata/gameQuestions';
 
 // Answer component for quiz. Creates radio button selection.
-const Answer = ({ answers, handleAnswerClick }) => {
-    return (
-        <li className="answerOption">
-        <input
-        type="radio"
-        className="radioCustomButton"
-        name="radioGroup"
-        checked={props.answerType === props.answer}
-        onClick={handleAnswerClick}
-        />
-        <label className="radioCustomLabel" htmlFor={props.answerType}>
-            {props.answerContent}
+const Answer = ({ answers, props }) => {
+    <li className="answerOption">
+            <input
+            type="radio"
+            className="radioCustomButton"
+            name="radioGroup"
+            value="Here is a value"
+            />
+        <label className="radioCustom">
       </label>
-        </li>
-    );
-}
-
-
-Answer.propTypes = {
-    answerType: React.PropTypes.string.isRequired,
-    answerContent: React.PropTypes.string.isRequired,
-    answer: React.PropTypes.string.isRequired,
-    onAnswerSelected: React.PropTypes.func.isRequired
-  };
+    </li>
+};
 
 export default Answer;
