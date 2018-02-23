@@ -1,6 +1,6 @@
 
 let con = require('../config/connection.js');
-let bcrypt = require('bcrypt');
+let bcrypt = require('bcrypt-nodejs');
 
 function addUser(userName, password, cb, res){
     console.log(userName);

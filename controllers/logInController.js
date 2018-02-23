@@ -1,5 +1,5 @@
 let con = require('../config/connection.js');
-let bcrypt = require('bcrypt');
+let bcrypt = require('bcrypt-nodejs');
 
 function validateUser(userName, password, cb, res){
     let sql = `SELECT password FROM users WHERE user_name="${userName}"`
