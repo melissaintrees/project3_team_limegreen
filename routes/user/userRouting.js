@@ -32,7 +32,6 @@ function cb(result, res, userName){
     }
     else{
       console.log('Log in Failed')
-      res.send(token);
     }
 }
 

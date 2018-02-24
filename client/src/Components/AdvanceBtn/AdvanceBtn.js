@@ -5,7 +5,7 @@ import "./AdvanceBtn.css"
 // That way we don't have to define them all individually
 const AdvanceBtn = props => (
   <span className="advance-btn" {...props}>
-    BUTTON
+    Advance
   </span>
 );
 
