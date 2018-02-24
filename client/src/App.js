@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import gameQuestions from './mockdata/gameQuestions';
-import GameApp from './Components/Game/GameApp';
+import GameApp from './Pages/Game/GameApp';
 import SignupForm from './Components/SignupForm/SignupForm';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 

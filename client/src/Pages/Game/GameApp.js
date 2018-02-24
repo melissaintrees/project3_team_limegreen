@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Answer from './Answer';
-import Question from './Question';
+import Answer from '../../Components/Game/Answer';
+import Question from '../../Components/Game/Question';
 // import  questions from './../mockdata/gameQuestions';
 import axios from 'axios';
-import AdvanceBtn from './../AdvanceBtn/AdvanceBtn'
+import AdvanceBtn from '../../Components/AdvanceBtn/AdvanceBtn'
 
 // GameApp runs game logic
 class GameApp extends Component {    
@@ -30,13 +30,6 @@ class GameApp extends Component {
           console.log(error);
         });
       };
-
-    componentDidMount() {
-        this.setState({
-            question: "Hello World",
-            answer: "Nothing"
-        });
-    };
 
     render() {
         return (
