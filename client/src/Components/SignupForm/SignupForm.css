@@ -1,0 +1,39 @@
+body {
+  background-color: #5fcc9c;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #3E363F;
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+/* 
+.SignupForm {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.UserSignup {
+  display: flex;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid rgba(255, 252, 232, 0.1);
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+}
+.UserSignup input {
+  outline: none;
+  border: 0;
+  color: #FFFCE8;
+  background: transparent;
+  font-family: "Lato", sans-serif;
+  flex: 1 0 auto;
+  font-size: 14px;
+  font-weight: 300;
+}

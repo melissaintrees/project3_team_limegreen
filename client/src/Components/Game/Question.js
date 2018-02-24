@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import  questions from '../mockdata/gameQuestions';
+// import  questions from '../mockdata/gameQuestions';
 
 
 // Map function below goes loops over each video
