@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Answer from './Answer';
 import Question from './Question';
-import  questions from '../mockdata/gameQuestions';
+// import  questions from './../mockdata/gameQuestions';
 import axios from 'axios';
-import AdvanceBtn from './AdvanceBtn/AdvanceBtn'
+import AdvanceBtn from './../AdvanceBtn/AdvanceBtn'
 
 // GameApp runs game logic
 class GameApp extends Component {    
@@ -57,12 +56,8 @@ class GameApp extends Component {
 
         );
     };
-    
-    
+
 // End GameApp    
 };
 
 export default GameApp;
-
-// Take component's generated HTML and put it in the DOM
-// ReactDOM.render(<GameApp />, document.querySelector('.container'));

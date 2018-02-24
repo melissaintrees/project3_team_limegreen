@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import  questions from '../mockdata/gameQuestions';
+// import PropTypes from 'prop-types';
+// import  questions from '../mockdata/gameQuestions';
 
 // Answer component for quiz. Creates radio button selection.
 const Answer = (props) =>
