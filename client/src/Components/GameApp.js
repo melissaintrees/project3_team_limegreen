@@ -13,18 +13,19 @@ class GameApp extends Component {
 
         this.state = {
             question: "here",
-            answer: "testing"
+            answer: "testing",
+            answerState: 1,
         };
     }
 
     getAnswer() {
-        axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/1')
+        axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + this.state.answerState)
         .then((response)=> {
-          console.log(response.data[0].questions);
-          console.log(response.data[0].answer0);
+            console.log(response);
           this.setState({
-          question: response.data[0].questions,
-          answer: response.data[0].answer0
+            question: response.data[0].questions,
+            answer: response.data[0].answer0,
+            answerState: this.state.answerState++
           });
         })
         .catch(function (error) {
@@ -32,27 +33,20 @@ class GameApp extends Component {
         });
       };
 
-    componentDidMount() {
-        this.setState({
-            question: "Hello World",
-            answer: "Nothing"
-        });
-    };
-
     render() {
         return (
             <div>
-                <AdvanceBtn onClick={() => this.getAnswer()} />
                 <h1>
-                <Question 
-                 value={this.state.question}
-                />
+                    <Question 
+                        value={this.state.question}
+                    />
                 </h1>
                 <h2>
-                <Answer
-                value={this.state.answer}
-                />
+                    <Answer
+                        value={this.state.answer}
+                    />
                 </h2>
+                <AdvanceBtn onClick={() => this.getAnswer()} />
             </div>
 
         );
