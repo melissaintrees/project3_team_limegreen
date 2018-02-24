@@ -50,7 +50,6 @@ header {
 
 .btn-signup {
     background-color: #ffd93c;
-    
 }
 
 .btn-login {
@@ -62,4 +61,49 @@ header {
     padding: 30px 30px;
     border-radius: 5px;
     margin: 20px auto 20px auto;
+}
+
+/* styles for sign up page */
+
+.header2 {
+    background-color: #ffd93c;
+    padding: 15px;
+}
+
+.title2 {
+    color: dodgerblue;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.signup-content-div {
+    background-color: #2b3e5c;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.btn-continue {
+    background-color: #fa3949;
+    font-weight: bold;
+    color: #2b3e5c;
+    font-size: 16px;
+    width: 90%;
+    padding: 35px 35px;
+    border-radius: 5px;
+    margin: 20px auto 20px auto;
+}
+
+.sign-up-bg {
+    background-color: #fd721b;
+    margin: 30px;
+}
+
+.sign-up-bg h3 {
+    padding: 50px 0 20px 0;
+}
+
+.help-block {
+    padding: 20px 0 50px 0;
 }
