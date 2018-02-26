@@ -18,7 +18,6 @@ class UserSignup extends React.Component {
 	}
 };
 
-
 class SignupForm extends React.Component {
     render ()
     return {
