@@ -1,7 +1,7 @@
 import React from 'react';
-import "./SignupForm.css";
+import "./LoginForm.css";
 
-const SignupForm = props =>
+const LoginForm = props =>
 			<div className="Signup">
 				<form className="ModalForm">
 					<p>
@@ -15,16 +15,6 @@ const SignupForm = props =>
 					</p>
 					<br></br>
 					<p>
-						{/*<span>Email:  </span>*/}
-						<input
-							id="email"
-							type="email"
-							placeholder="Email" 
-							required 
-						/>
-					</p>
-					<br></br>
-					<p>
 						{/*<span>Password:   </span>*/}
 						<input
 							id="password"
@@ -33,16 +23,7 @@ const SignupForm = props =>
 							required />
 					</p>
 					<br></br>
-					<p>
-						{/*<span>Confirm Password:   </span>*/}
-						<input
-							id="password"
-							type="password"
-							placeholder="Confirm Password" 
-							required />
-					</p>
-					<br></br>
 				</form>
 			</div>;
 
-export default SignupForm;
+export default LoginForm;
