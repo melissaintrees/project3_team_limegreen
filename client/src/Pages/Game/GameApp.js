@@ -17,7 +17,7 @@ class GameApp extends Component {
         };
     }
 
-    getAnswer() {
+    getAnswer = () => {
         axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + this.state.answerState)
         .then((response)=> {
             console.log(response);

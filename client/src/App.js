@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import gameQuestions from './mockdata/gameQuestions';
 import GameApp from './Pages/Game/GameApp';
-import SignupForm from './Components/SignupForm/SignupForm';
+import Signup from './Pages/Signup/Signup';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () =>
   <Router>
     <div>
       <Switch>
-        <Route exact path="/Signup" component={SignupForm} />
+        <Route exact path="/Signup" component={Signup} />
       </Switch>
     </div>
   </Router>;
