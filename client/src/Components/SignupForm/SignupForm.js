@@ -1,38 +1,47 @@
 import React from 'react';
-// import './SingupForm.css';
+import "./SignupForm.css";
 
 const SignupForm = props =>
 			<div className="Signup">
-				<form className="form-control" 
-					className="ModalForm">
-					<input
-						id="Username"
-						type="text"
-						placeholder="Hint: Don't use your real name" 
-                        required />
-                    <br>
-                    </br>
-					<input
-						id="email"
-						type="email"
-						placeholder="flibbitygibbit@gmail.com" 
-                        required />
-                    <br>
-                    </br>
-					<input
-						id="password"
-						type="password"
-						placeholder="Password" 
-                        required />
-                    <br>
-                    </br>
-                    <input
-						id="password"
-						type="password"
-						placeholder="Confirm Password" 
-                        required />
-                    <br>
-                    </br>
+				<form className="ModalForm">
+					<p>
+						{/*<span>Username:   </span>*/}
+						<input
+							id="Username"
+							type="text"
+							placeholder="Username" 
+							required 
+						/>
+					</p>
+					<br></br>
+					<p>
+						{/*<span>Email:  </span>*/}
+						<input
+							id="email"
+							type="email"
+							placeholder="Email" 
+							required 
+						/>
+					</p>
+					<br></br>
+					<p>
+						{/*<span>Password:   </span>*/}
+						<input
+							id="password"
+							type="password"
+							placeholder="Password" 
+							required />
+					</p>
+					<br></br>
+					<p>
+						{/*<span>Confirm Password:   </span>*/}
+						<input
+							id="password"
+							type="password"
+							placeholder="Confirm Password" 
+							required />
+					</p>
+					<br></br>
 					<button className="submit">
 						Create Account<i className="fa fa-fw fa-chevron-right"></i>
 					</button>
