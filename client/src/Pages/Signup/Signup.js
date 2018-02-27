@@ -20,18 +20,9 @@ class Signup extends Component {
     render() {
         return (
             <div>
-<<<<<<< HEAD
-                <Header />
+                <AppHeader />
                 <SignupForm />
                 <ContinueBtn />
-=======
-				<AppHeader
-				/>
-                <SignupForm
-				/>
-                <ContinueBtn
-                />
->>>>>>> 2949e2afb77e9bc3cc6cde4ad9f2ce34f61cbe8a
             </div>
         );
     };
