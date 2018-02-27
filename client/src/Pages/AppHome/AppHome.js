@@ -1,13 +1,12 @@
-export { default } from "./Home";import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
 import Header from '../../Components/Header/Header';
-import Home from '../../Components/Home/Home';
+import HomePage from '../../Components/HomePage/HomePage';
 import LoginBtn from '../../Components/LoginBtn/LoginBtn';
-import LogoutBtn from '../../Components/LogoutBtn/LogoutBtn';
+import SignupBtn from '../../Components/SignupBtn/SignupBtn';
 
 
 
-class Home extends Component {    
+class AppHome extends Component {    
     constructor(props) {
         super(props);
 
@@ -23,11 +22,11 @@ class Home extends Component {
             <div>
 				<Header
 				/>
-                <Home
+                <HomePage
 				/>
-                <LoginBtn
+                <SignupBtn
                 />
-                <LogoutBtn
+                <LoginBtn
                 />
             </div>
 
@@ -35,4 +34,4 @@ class Home extends Component {
     };
 };
 
-export default Home;
+export default AppHome;

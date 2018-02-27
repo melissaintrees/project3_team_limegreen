@@ -8,6 +8,10 @@ body {
   background-color: #2b3e5c;
 }
 
+input {
+  width: 90%;
+}
+
 .header2 {
   background-color: #ffd93c;
   padding: 15px;

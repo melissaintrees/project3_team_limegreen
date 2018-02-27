@@ -1,12 +1,11 @@
-export { default } from "./Home";import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
-import Home from '../../Components/Home/Home';
 import LogoutBtn from '../../Components/LogoutBtn/LogoutBtn';
+import Score from '../../Components/Score/Score';
 
 
-class Score extends Component {    
+class ScoreResults extends Component {    
     constructor(props) {
         super(props);
 
@@ -34,4 +33,4 @@ class Score extends Component {
     };
 };
 
-export default Score;
+export default ScoreResults;
