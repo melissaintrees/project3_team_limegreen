@@ -20,14 +20,10 @@ class Signup extends Component {
     render() {
         return (
             <div>
-				<Header
-				/>
-                <SignupForm
-				/>
-                <ContinueBtn
-                />
+                <Header />
+                <SignupForm />
+                <ContinueBtn />
             </div>
-
         );
     };
 };

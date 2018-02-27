@@ -19,14 +19,10 @@ class Login extends Component {
     render() {
         return (
             <div>
-				<Header
-				/>
-                <LoginForm
-				/>
-                <ContinueBtn
-                />
+                <Header />
+                <LoginForm />
+                <ContinueBtn />
             </div>
-
         );
     };
 };
