@@ -1,7 +1,7 @@
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn'
-import Header from '../../Components/Header/Header'
+import AppHeader from '../../Components/AppHeader/AppHeader'
 import SignupForm from '../../Components/SignupForm/SignupForm'
 
 
@@ -20,9 +20,18 @@ class Signup extends Component {
     render() {
         return (
             <div>
+<<<<<<< HEAD
                 <Header />
                 <SignupForm />
                 <ContinueBtn />
+=======
+				<AppHeader
+				/>
+                <SignupForm
+				/>
+                <ContinueBtn
+                />
+>>>>>>> 2949e2afb77e9bc3cc6cde4ad9f2ce34f61cbe8a
             </div>
         );
     };
