@@ -1,10 +1,11 @@
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
-import Categories from '../../Components/Categories/Categories';
-import AppHeader from '../../Components/AppHeader/AppHeader';
-import LogoutBtn from '../../Components/LogoutBtn/LogoutBtn';
+import LoginForm from '../Components/LoginForm/LoginForm'
+import Header from '../Components/Header/Header'
+import ContinueBtn from '../Components/ContinueBtn/ContinueBtn';
 
-class CategoryOptions extends Component {    
+
+class Login extends Component {    
     constructor(props) {
         super(props);
 
@@ -18,16 +19,12 @@ class CategoryOptions extends Component {
     render() {
         return (
             <div>
-				<AppHeader
-				/>
-                <Categories
-				/>
-                <LogoutBtn
-                />
+                <Header />
+                <LoginForm />
+                <ContinueBtn />
             </div>
-
         );
     };
 };
 
-export default CategoryOptions;
+export default Login;

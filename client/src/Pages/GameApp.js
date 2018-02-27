@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Answer from '../../Components/Game/Answer';
-import Question from '../../Components/Game/Question';
+import Answer from '../Components/Game/Answer';
+import Question from '../Components/Game/Question';
 // import  questions from './../mockdata/gameQuestions';
 import axios from 'axios';
-import AdvanceBtn from '../../Components/AdvanceBtn/AdvanceBtn'
+import AdvanceBtn from '../Components/AdvanceBtn/AdvanceBtn'
 
 // GameApp runs game logic
 class GameApp extends Component {

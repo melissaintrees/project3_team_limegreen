@@ -1,11 +1,10 @@
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
-import AppHeader from '../../Components/AppHeader/AppHeader';
-import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
-import LogoutBtn from '../../Components/LogoutBtn/LogoutBtn';
-import Score from '../../Components/Score/Score';
+import Categories from '../Components/Categories/Categories';
+import AppHeader from '../Components/AppHeader/AppHeader';
+import LogoutBtn from '../Components/LogoutBtn/LogoutBtn';
 
-
-class ScoreResults extends Component {    
+class CategoryOptions extends Component {    
     constructor(props) {
         super(props);
 
@@ -21,10 +20,8 @@ class ScoreResults extends Component {
             <div>
 				<AppHeader
 				/>
-                <Score
+                <Categories
 				/>
-                <ContinueBtn
-                />
                 <LogoutBtn
                 />
             </div>
@@ -33,4 +30,4 @@ class ScoreResults extends Component {
     };
 };
 
-export default ScoreResults;
+export default CategoryOptions;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from '../../Components/Header/Header';
-import HomePage from '../../Components/HomePage/HomePage';
-import LoginBtn from '../../Components/LoginBtn/LoginBtn';
-import SignupBtn from '../../Components/SignupBtn/SignupBtn';
+import Header from '../Components/Header/Header';
+import HomePage from '../Components/HomePage/HomePage';
+import LoginBtn from '../Components/LoginBtn/LoginBtn';
+import SignupBtn from '../Components/SignupBtn/SignupBtn';
 
 
 
@@ -27,7 +27,7 @@ class AppHome extends Component {
                 <SignupBtn
                 />
                 <LoginBtn
-                />
+                /> 
             </div>
 
         );
