@@ -9,7 +9,8 @@ const LoginForm = props =>
 						<input
 							id="Username"
 							type="text"
-							placeholder="Username" 
+							placeholder="Username"
+							class="form-control"
 							required 
 						/>
 					</p>
@@ -20,7 +21,9 @@ const LoginForm = props =>
 							id="password"
 							type="password"
 							placeholder="Password" 
-							required />
+							class="form-control"
+							required 
+						/>
 					</p>
 					<br></br>
 				</form>

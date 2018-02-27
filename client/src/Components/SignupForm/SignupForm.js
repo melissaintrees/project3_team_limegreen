@@ -10,6 +10,7 @@ const SignupForm = props =>
 							id="Username"
 							type="text"
 							placeholder="Username" 
+							class="form-control"
 							required 
 						/>
 					</p>
@@ -19,7 +20,8 @@ const SignupForm = props =>
 						<input
 							id="email"
 							type="email"
-							placeholder="Email" 
+							placeholder="Email"
+							class="form-control" 
 							required 
 						/>
 					</p>
@@ -30,7 +32,9 @@ const SignupForm = props =>
 							id="password"
 							type="password"
 							placeholder="Password" 
-							required />
+							class="form-control"
+							required
+						/>
 					</p>
 					<br></br>
 					<p>
@@ -38,8 +42,10 @@ const SignupForm = props =>
 						<input
 							id="password"
 							type="password"
-							placeholder="Confirm Password" 
-							required />
+							placeholder="Confirm Password"
+							class="form-control" 
+							required 
+						/>
 					</p>
 					<br></br>
 				</form>
