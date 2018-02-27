@@ -1,7 +1,7 @@
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
 import LoginForm from '../../Components/LoginForm/LoginForm'
-import AppHeader from '../../Components/AppHeader/AppHeader'
+import Header from '../../Components/Header/Header'
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 
 
@@ -19,14 +19,10 @@ class Login extends Component {
     render() {
         return (
             <div>
-				<AppHeader
-				/>
-                <LoginForm
-				/>
-                <ContinueBtn
-                />
+                <Header />
+                <LoginForm />
+                <ContinueBtn />
             </div>
-
         );
     };
 };

@@ -6,7 +6,7 @@ import axios from 'axios';
 import AdvanceBtn from '../../Components/AdvanceBtn/AdvanceBtn'
 
 // GameApp runs game logic
-class GameApp extends Component {    
+class GameApp extends Component {
     constructor(props) {
         super(props);
 
@@ -19,35 +19,30 @@ class GameApp extends Component {
 
     getAnswer = () => {
         axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + this.state.answerState)
-        .then((response)=> {
-            console.log(response);
-          this.setState({
-            question: response.data[0].questions,
-            answer: response.data[0].answer0,
-            answerState: this.state.answerState++
-          });
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-      };
+            .then((response) => {
+                console.log(response);
+                this.setState({
+                    question: response.data[0].questions,
+                    answer: response.data[0].answer0,
+                    answerState: this.state.answerState++
+                });
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
 
     render() {
         return (
             <div>
                 <h1>
-                    <Question 
-                        value={this.state.question}
-                    />
+                    <Question value={this.state.question} />
                 </h1>
                 <h2>
-                    <Answer
-                        value={this.state.answer}
-                    />
+                    <Answer value={this.state.answer} />
                 </h2>
-                <AdvanceBtn onClick={() => this.getAnswer()} />
+                    <AdvanceBtn onClick={()=> this.getAnswer()} />
             </div>
-
         );
     };
 
