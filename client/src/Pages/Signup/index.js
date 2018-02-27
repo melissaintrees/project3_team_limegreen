@@ -1,1 +1,1 @@
-export { default } from "./Singup.js";
+export { default } from "./Signup.js";
