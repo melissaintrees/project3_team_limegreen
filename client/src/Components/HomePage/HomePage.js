@@ -1,9 +1,9 @@
 import React from "react";
 import "./HomePage.css";
 
-
 const HomePage = () => (
     <div>
+<<<<<<< HEAD
         <div>
             <div class="container">
 
@@ -28,6 +28,9 @@ const HomePage = () => (
             </div>
         </div>
         
+=======
+        <img src="../../static_code_aqaurium/images/lion.png"></img>
+>>>>>>> parent of 1178b745... add images and bootstrap styles to homepage component
     </div>
 );
 

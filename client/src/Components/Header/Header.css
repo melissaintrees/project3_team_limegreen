@@ -22,7 +22,9 @@ header {
 
 .img-div {
     margin-top: 20px;
-    width: 70%; 
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .main-content-div {
