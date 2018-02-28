@@ -1,8 +1,8 @@
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import React, { Component } from 'react';
+import React, { Component, Alert } from 'react';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import Input from '../../Components/Input/Input';
+import axios from 'axios';
 
 
 class Signup extends Component {    
@@ -56,34 +56,34 @@ class Signup extends Component {
     render() {
         return (
             <div>
-                <AppHeader 
-                />
-                <Form>
-                <Input
-                    value={this.state.title}
-                    onChange={this.handleInputChange}
-                    name="email"
-                    placeholder="Email"
-                />
-                <Input
-                    value={this.state.title}
-                    onChange={this.handleInputChange}
-                    name="username"
-                    placeholder="Username"
-                />
-                <Input
-                    value={this.state.author}
-                    onChange={this.handleInputChange}
-                    name="password"
-                    placeholder="Password"
-                />
-                <Input
-                    value={this.state.author}
-                    onChange={this.handleInputChange}
-                    name="confirmpassword"
-                    placeholder="Confirm Password"
-                />
-                </Form>
+                <form>
+                    <AppHeader 
+                    />
+                    <Input
+                        value={this.state.email}
+                        onChange={this.handleInputChange}
+                        name="email"
+                        placeholder="Email"
+                    />
+                    <Input
+                        value={this.state.username}
+                        onChange={this.handleInputChange}
+                        name="username"
+                        placeholder="Username"
+                    />
+                    <Input
+                        value={this.state.password}
+                        onChange={this.handleInputChange}
+                        name="password"
+                        placeholder="Password"
+                    />
+                    <Input
+                        value={this.state.confirmpassword}
+                        onChange={this.handleInputChange}
+                        name="confirmpassword"
+                        placeholder="Confirm Password"
+                    />
+                </form>
                 <ContinueBtn
                     onClick={this.handleFormSubmit} 
                 />

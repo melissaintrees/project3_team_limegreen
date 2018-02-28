@@ -1,7 +1,7 @@
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
-import Input from '../../Components/Input/Input'
-import Header from '../../Components/Header/Header'
+import axios from 'axios';
+import Input from '../../Components/Input/Input';
+import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 
 
@@ -44,18 +44,19 @@ class Login extends Component {
                 <AppHeader 
                 />
                 <Input
-                value={this.state.title}
+                value={this.state.username}
                 onChange={this.handleInputChange}
                 name="username"
                 placeholder="Username"
               />
               <Input
-                value={this.state.author}
+                value={this.state.password}
                 onChange={this.handleInputChange}
                 name="password"
                 placeholder="Password"
               />
                 <ContinueBtn 
+                onClick={this.handleFormSubmit}
                 />
             </div>
         );
