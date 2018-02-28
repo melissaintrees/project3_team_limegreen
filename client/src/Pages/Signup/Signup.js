@@ -19,7 +19,7 @@ class Signup extends Component {
 
     confirmPassword = () => {
         if (this.state.password === this.state.confirmpassword) {
-
+            handleFormSubmit();
         }
         else {
             Alert.alert("Your password does not match. Please enter matching passwords")
@@ -79,7 +79,7 @@ class Signup extends Component {
                     />
                     <Input
                         value={this.state.confirmpassword}
-                        onChange={this.handleInputChange}
+                        onChange={this.confirmPassword}
                         name="confirmpassword"
                         placeholder="Confirm Password"
                     />
