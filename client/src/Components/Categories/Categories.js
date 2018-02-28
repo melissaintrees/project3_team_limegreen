@@ -5,17 +5,17 @@ const Categories = props => (
     <div>
         <div className="html">
             <button type="button" className="btn btn-html btn-lg btn-block" {...props}>
-            <img src="../../static_code_aqaurium/images/penguin"></img>HTML
+            <img className="img-div" alt="cute lion cartoon" src={require('../../static_code_aquarium/images/penguin.png')} />HTML
             </button>
         </div>
         <div className="css">
             <button type="button" className="btn btn-css btn-lg btn-block" {...props}>
-            <img src="../../static_code_aqaurium/images/squirrely"></img>CSS
+            <img className="img-div" alt="cute lion cartoon" src={require('../../static_code_aquarium/images/zebra.png')} />CSS
             </button>
         </div>
         <div className="loops">
             <button type="button" className="btn btn-loops btn-lg btn-block" {...props}>
-            <img src="../../static_code_aqaurium/images/zebra.png"></img>Loops
+            <img className="img-div" alt="cute lion cartoon" src={require('../../static_code_aquarium/images/squirrely.png')} />LOOPS
             </button>
         </div>
     </div>
