@@ -13,6 +13,8 @@ router.post("/login", function(req, res) {
 });
 
 router.post("/signup", function(req, res) {
+    console.log(req.body.username);
+    console.log(req.body.password);
     newUser(req.body.username, req.body.password, cb, res);
   });
 
