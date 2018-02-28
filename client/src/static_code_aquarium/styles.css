@@ -107,3 +107,42 @@ header {
 .help-block {
     padding: 20px 0 50px 0;
 }
+/* game components styles */
+.card-sty {
+    background-color: #ffd93c;
+}
+
+.qtxt {
+    color: #4d81c3;
+    font-weight: bold;
+}
+
+.button-grouping {
+   text-align: center;
+}
+
+.btn-answer1, .btn-answer2, .btn-answer3, .btn-answer4 {
+    color: white;
+    /* margin: 25px; */
+    width:110px;
+    padding: 15px 15px;
+    margin: 15px 15px;
+}
+
+.btn-answer1 {
+    background-color: #2b3e5c;
+}
+
+.btn-answer2 {
+    background-color: #fa3949;
+}
+
+.btn-answer3 {
+    background-color: #4d81c3;
+}
+
+.btn-answer4 {
+    background-color: #fd721b;
+}
+
+
