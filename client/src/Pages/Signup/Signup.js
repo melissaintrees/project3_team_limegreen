@@ -1,9 +1,8 @@
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
-import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn'
-import AppHeader from '../../Components/AppHeader/AppHeader'
-import SignupForm from '../../Components/SignupForm/SignupForm'
-
+import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
+import AppHeader from '../../Components/AppHeader/AppHeader';
+import Input from '../../Components/Input/Input';
 
 
 class Signup extends Component {    
@@ -11,18 +10,83 @@ class Signup extends Component {
         super(props);
 
         this.state = {
-            question: "here",
-            answer: "testing",
-            answerState: 1,
+            email: "",
+            username: "",
+            password: "",
+            confirmpassword: "",
         };
     }
+
+    confirmPassword = () => {
+        if (this.state.password === this.state.confirmpassword) {
+
+        }
+        else {
+            Alert.alert("Your password does not match. Please enter matching passwords")
+        }
+    };
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+      };
+    
+      handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.email && this.state.username && this.state.password && this.state.confirmpassword) {
+            axios.post('/signup', {
+                email: this.state.email,
+                username: this.state.username,
+                password: this.state.password,
+                confirmpassword: this.state.confirmpassword
+              })
+              .then(function (response) {
+                console.log(response);
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+        }
+      };
+
+
 
     render() {
         return (
             <div>
-                <AppHeader />
-                <SignupForm />
-                <ContinueBtn />
+                <AppHeader 
+                />
+                <Form>
+                <Input
+                    value={this.state.title}
+                    onChange={this.handleInputChange}
+                    name="email"
+                    placeholder="Email"
+                />
+                <Input
+                    value={this.state.title}
+                    onChange={this.handleInputChange}
+                    name="username"
+                    placeholder="Username"
+                />
+                <Input
+                    value={this.state.author}
+                    onChange={this.handleInputChange}
+                    name="password"
+                    placeholder="Password"
+                />
+                <Input
+                    value={this.state.author}
+                    onChange={this.handleInputChange}
+                    name="confirmpassword"
+                    placeholder="Confirm Password"
+                />
+                </Form>
+                <ContinueBtn
+                    onClick={this.handleFormSubmit} 
+                />
             </div>
         );
     };
