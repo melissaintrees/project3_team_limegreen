@@ -2,15 +2,13 @@ import React from "react";
 import "./AppHeader.css";
 
 const AppHeader = props => (
-<div className="appheader">
-    <br></br>
-        <header>
+
+        <div className="appheader">
             <br></br>
-                <span className="title">CODESTARS</span>
+                <div className="title2">CODE STARS</div>
             <br></br>
-        </header>
-    <br></br>
-</div>
+        </div>
+
 );
 
 export default AppHeader;
