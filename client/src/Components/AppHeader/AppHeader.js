@@ -4,9 +4,11 @@ import "./AppHeader.css";
 const AppHeader = props => (
 
         <div className="appheader">
-            <br></br>
-                <div className="title2">CODE STARS</div>
-            <br></br>
+            
+            <h2 class="title2">
+                <span class="glyphicon glyphicon-arrow-left pull-left" aria-hidden="true"></span>CODE STARS
+            </h2>
+                
         </div>
 
 );
