@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Answer from '../../Components/Game/Answer';
-import Question from '../../Components/Game/Question';
+import Answer from '../../Components/Answer/Answer';
+// import Question from '../Components/Game/Question';
 // import  questions from './../mockdata/gameQuestions';
 import axios from 'axios';
 import AdvanceBtn from '../../Components/AdvanceBtn/AdvanceBtn'
@@ -18,7 +18,7 @@ class GameApp extends Component {
     }
 
     getAnswer = () => {
-        axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + this.state.answerState)
+        axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + 2)
             .then((response) => {
                 console.log(response);
                 this.setState({
@@ -36,7 +36,7 @@ class GameApp extends Component {
         return (
             <div>
                 <h1>
-                    <Question value={this.state.question} />
+                    {/* <Question value={this.state.question} /> */}
                 </h1>
                 <h2>
                     <Answer value={this.state.answer} />
