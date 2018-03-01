@@ -116,9 +116,11 @@ class Signup extends Component {
                                         </p>
                                     </div>
                                     <div className="form-group">
+                                        <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
                                         <ContinueBtn
                                             onClick={this.handleFormSubmit}
                                         />
+                                        </div>
                                     </div>
                                 </form>
                             </div>

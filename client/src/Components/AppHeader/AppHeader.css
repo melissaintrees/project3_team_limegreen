@@ -31,4 +31,19 @@
 
 .help-block {
     padding: 20px 0 50px 0;
+    margin: 0 50px 0 50px;
 }
+
+.login-bg {
+    background-color: #ffd93c;
+    margin: 30px;
+    padding-top: 142px;
+    padding-bottom: 142px;
+}
+
+.login-bg h3 {
+    margin: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+    
