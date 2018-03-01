@@ -1,13 +1,15 @@
 
 .appheader {
     background-color: #ffd93c;
-    text-align: center;
+    padding: 15px;
+    
 }
 
 .title2 {
     color: dodgerblue;
     font-size: 26px;
     font-weight: bold;
+    text-align: center;
 }
 
 .signup-content-div {
@@ -19,6 +21,8 @@
 .sign-up-bg {
     background-color: #fd721b;
     margin: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .sign-up-bg h3 {

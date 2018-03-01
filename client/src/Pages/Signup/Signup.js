@@ -59,7 +59,7 @@ class Signup extends Component {
             <div className="container">
                 <div className="row ">
                     <div className="col-0 col-lg-3"></div>
-                    <div className="col-12 col-lg-6 ">
+                    <div className="col-12 col-lg-6">
                         <AppHeader 
                         />
                             <div className="text-center border signup-content-div">
@@ -68,8 +68,8 @@ class Signup extends Component {
                                     <div className="sign-up-bg">
                                         <h3>Create an Account</h3>
                                         <div className="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label"></label>
-                                            <div className="col-sm-8">
+                                            <label for="inputEmail3" class="col-sm-2 col-xs-1 control-label"></label>
+                                            <div className="col-sm-8 col-xs-10">
                                                 <Input
                                                     value={this.state.email}
                                                     onChange={this.handleInputChange}
@@ -79,8 +79,8 @@ class Signup extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label"></label>
-                                            <div className="col-sm-8">
+                                            <label for="inputEmail3" class="col-sm-2 col-xs-1 control-label"></label>
+                                            <div className="col-sm-8 col-xs-10">
                                                 <Input
                                                     value={this.state.username}
                                                     onChange={this.handleInputChange}
@@ -90,8 +90,8 @@ class Signup extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group">
-                                            <label  class="col-sm-2 control-label"></label>
-                                            <div className="col-sm-8">
+                                            <label for="inputPassword3" class="col-sm-2 col-xs-1 control-label"></label>
+                                            <div className="col-sm-8 col-xs-10">
                                                 <Input
                                                     value={this.state.password}
                                                     onChange={this.handleInputChange}
@@ -101,13 +101,13 @@ class Signup extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group">
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div className="col-sm-8">
+                                            <label for="inputPassword3" class="col-sm-2 col-xs-1 control-label"></label>
+                                            <div className="col-sm-8 col-xs-10">
                                                 <Input
-                                                    name="confirmpassword"
-                                                    placeholder="Confirm Password"
                                                     value={this.state.confirmpassword}
                                                     onChange={this.confirmPassword}
+                                                    name="confirmpassword"
+                                                    placeholder="Confirm Password"
                                                 />
                                             </div>
                                         </div>
