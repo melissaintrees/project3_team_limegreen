@@ -1,7 +1,7 @@
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
-import LoginForm from '../../Components/LoginForm/LoginForm'
-import Header from '../../Components/Header/Header'
+import axios from 'axios';
+import Input from '../../Components/Input/Input';
+import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 
 
@@ -10,18 +10,54 @@ class Login extends Component {
         super(props);
 
         this.state = {
-            question: "here",
-            answer: "testing",
-            answerState: 1,
+            username: "",
+            password: "",
         };
     }
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+      };
+    
+      handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.username && this.state.password) {
+            axios.post('https://mysterious-bastion-34346.herokuapp.com/users/login', {
+                username: this.state.username,
+                password: this.state.password
+              })
+              // .then(function (response) {
+              //   console.log(response);
+              // })
+              // .catch(function (error) {
+              //   console.log(error);
+              // });
+        }
+      };
 
     render() {
         return (
             <div>
-                <Header />
-                <LoginForm />
-                <ContinueBtn />
+                <AppHeader 
+                />
+                <Input
+                value={this.state.username}
+                onChange={this.handleInputChange}
+                name="username"
+                placeholder="Username"
+              />
+              <Input
+                value={this.state.password}
+                onChange={this.handleInputChange}
+                name="password"
+                placeholder="Password"
+              />
+                <ContinueBtn 
+                onClick={this.handleFormSubmit}
+                />
             </div>
         );
     };

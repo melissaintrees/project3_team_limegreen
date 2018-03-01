@@ -1,4 +1,3 @@
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import React, { Component } from 'react';
 import Categories from '../../Components/Categories/Categories';
 import AppHeader from '../../Components/AppHeader/AppHeader';
