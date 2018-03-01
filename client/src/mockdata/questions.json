@@ -42,7 +42,7 @@ export const cssCategory = {
         {
             type: "multipleChoice",
             question: "What code would change the background color of a page to green?",
-            incorrectAnswers: ["color: green", "Change-Color: GREEN", "background-color: blue"],
+            incorrectAnswers: ["color: green", "Change-Color: GREEN", "background-color: blue", "color:red"],
             correctAnswer: "background-color: green"
         },
         {
