@@ -19,13 +19,14 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "concurrently": "^3.5.1",
     "axios": "^0.16.2",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
+    "concurrently": "^3.5.1",
     "express": "^4.15.4",
     "jsonwebtoken": "^8.1.1",
     "mongoose": "^4.11.7",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "react-scripts": "^1.1.1"
   }
 }
