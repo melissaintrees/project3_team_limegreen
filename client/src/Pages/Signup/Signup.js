@@ -1,6 +1,6 @@
-import React, { Component, Alert } from 'react';
-import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
+import React, { Component } from 'react';
 import AppHeader from '../../Components/AppHeader/AppHeader';
+import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 import Input from '../../Components/Input/Input';
 import axios from 'axios';
 
@@ -16,15 +16,6 @@ class Signup extends Component {
             confirmpassword: "",
         };
     }
-
-    confirmPassword = () => {
-        if (this.state.password === this.state.confirmpassword) {
-            handleFormSubmit();
-        }
-        else {
-            Alert.alert("Your password does not match. Please enter matching passwords")
-        }
-    };
 
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -51,14 +42,22 @@ class Signup extends Component {
         }
       };
 
+      confirmPassword = () => {
+        if (this.state.password === this.state.confirmpassword) {
+            this.handleFormSubmit();
+        }
+        else {
+            alert("Your password does not match. Please enter matching passwords")
+        }
+    };
 
 
     render() {
         return (
             <div>
-                <form>
                     <AppHeader 
                     />
+                <form>
                     <Input
                         value={this.state.email}
                         onChange={this.handleInputChange}
@@ -83,90 +82,13 @@ class Signup extends Component {
                         name="confirmpassword"
                         placeholder="Confirm Password"
                     />
+                    <ContinueBtn
+                        onClick={this.handleFormSubmit} 
+                    />
                 </form>
-                <ContinueBtn
-                    onClick={this.handleFormSubmit} 
-                />
             </div>
         );
     };
 };
 
 export default Signup;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class UserSignup extends React.Component {
-//     render() {
-//         return (
-// 			<div className="UserSingup">
-// 				<input 
-// 					id={this.props.id}
-// 					autoComplete="false"
-// 					required
-// 					type={this.props.type}
-// 					placeholder={this.props.placeholder}
-// 				/>	
-// 				<label htmlFor={this.props.id}></label>
-// 			</div>
-// 		);
-// 	}
-// };
-
-
-// class SignupForm extends React.Component {
-//     render ()
-//     return {
-// 	getInitialState: { ( mounted: false );
-// 	},
-// 	componentDidMount: function() {
-// 		this.setState({ mounted: true });
-// 	},
-	
-// 	handleSubmit: function(event) {
-// 		this.setState({ mounted: false });
-// 		event.preventDefault();
-// 	},
-
-// 	render: function() {
-// 		var child;
-
-// 		if(this.state.mounted) {
-// 			child = (<Modal onSubmit={this.handleSubmit} />);
-// 		}
-		
-// 		return(
-// 			<div className="SignupForm">
-// 				<ReactCSSTransitionGroup 
-// 					transitionName="example"
-// 					transitionEnterTimeout={500}
-// 					transitionLeaveTimeout={300}>
-// 						{child}
-// 				</ReactCSSTransitionGroup>
-// 			</div>
-// 		);
-// 	};
-// };
-// }
