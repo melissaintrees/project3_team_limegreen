@@ -10,7 +10,7 @@
     "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "installDeps": "yarn && cd client && yarn",
-    "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd server && PORT=3001 yarn start\""
+    "start": "concurrently \"cd client && PORT=5304 yarn start\" \"cd server && PORT=53041 yarn start\""
   },
   "author": "",
   "license": "ISC",
