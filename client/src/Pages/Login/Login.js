@@ -79,8 +79,10 @@ class Login extends Component {
                                     </div>
                                     <div className="form-group">
                                         <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
+                                            {/* this event handler goes in the continuebtn component but was commented out to get the links working  */}
+                                            {/* onClick={this.handleFormSubmit} */}
                                             <ContinueBtn
-                                                onClick={this.handleFormSubmit}
+                                                
                                             />
                                         </div>
                                     </div>

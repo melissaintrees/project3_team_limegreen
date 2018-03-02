@@ -38,15 +38,8 @@ class AppHome extends Component {
                         </div>
                         <div className="col-0 col-lg-3"></div>
                     </div>
-
-                    <div className="row">
-                        <div className="col-0 col-lg-3"></div>
-                        <div className="col-12 col-lg-6 "></div>
-                        <div className="col-0 col-lg-3"></div>
-                    </div>
                 
                 </div>
-
             </div>
 
         );

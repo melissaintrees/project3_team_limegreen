@@ -117,9 +117,11 @@ class Signup extends Component {
                                     </div>
                                     <div className="form-group">
                                         <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
-                                        <ContinueBtn
-                                            onClick={this.handleFormSubmit}
-                                        />
+                                            {/* this event handler goes in the continue component but was commented out to get the links working  */}
+                                            {/* {/* onClick={this.handleFormSubmit}}                                            */}
+                                            <ContinueBtn
+                                                
+                                            />
                                         </div>
                                     </div>
                                 </form>
