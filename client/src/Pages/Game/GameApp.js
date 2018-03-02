@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import Answer from '../../Components/Answer/Answer';
-// import Question from '../Components/Game/Question';
-import cssCategory from '../../mockdata/questions';
-// console.log(cssCategory);
-import axios from 'axios';
-import AdvanceBtn from '../../Components/AdvanceBtn/AdvanceBtn'
+import { cssCategory } from '../../mockdata/questions';
+import Question from '../../Components/Question/Question';
+// import axios from 'axios';
+// import AdvanceBtn from '../../Components/AdvanceBtn/AdvanceBtn';
 
 // GameApp runs game logic
 class GameApp extends Component {
@@ -12,30 +10,29 @@ class GameApp extends Component {
         super(props);
 
         this.state = {
-            question: "",
-            answers: [],
+            category: "cssCategory",
+            questions: cssCategory.questions,
+            // answersOptions: [],
+            // correctAnswer: "",
         };
-    }
-
-    componentDidMount = () => {
-        const answersArray = cssCategory.questions.map((questionObject)=>{
-            return questionObject.answers;
-            })
-        const questionFromJSON  = cssCategory.questions.question;
-        const answersFromJSON = cssCategory.questions.answers;
-        this.setState({question: questionFromJSON, answers: answersArray})
-            // .then((response) => {
-            //     console.log(response);
-            //     this.setState({
-            //         question: response.data[0].questions,
-            //         answer: response.data[0].answer0,
-            //         answerState: this.state.answerState++
-            //     });
-            // })
-            // .catch(function (error) {
-            //     console.log(error);
-            // });
+        // this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     };
+
+
+    // componentDidMount = () => {
+    //     const answersOptions = cssCategory.questions.map((questionObject)=>{
+    //         const questionFromJSON  = questionObject.question;
+    //         // const answersFromJSON = questionObject.answers;
+    //         this.setState({
+    //             question: questionFromJSON, 
+    //             // answerOptions: answersFromJSON
+    //         });
+    //     });
+    // };
+
+    // handleAnswerSelected(event) {
+    //     console.log("Add logic");
+    // };
 
     // getAnswer = () => {
     //     axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + 2)
@@ -56,12 +53,10 @@ class GameApp extends Component {
         return (
             <div>
                 <h1>
-                    {/* <Question value={this.state.question} /> */}
+                    { this.state.questions.map( (q) => ( 
+                        <Question question={q}/>
+                    ))};
                 </h1>
-                <h2>
-                    <Answer value={this.state.answers} />
-                </h2>
-                    {/* <AdvanceBtn onClick={()=> this.getAnswer()} /> */}
             </div>
         );
     };

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Answer from '../Answer';
 
 // import  questions from '../mockdata/gameQuestions';
 
@@ -9,14 +10,17 @@ const Question = (props) => {
 return (
     <div className="question">
       <div className="question-text">
-        <h3>{this.props.question}</h3>
+        <h1>{props.question.question}</h1>
       </div>
       <div className="question-code">
-        <h3>{this.props.questioncode}</h3>
+        <h3>{props.question.questioncode}</h3>
       </div>
       <picture className="question-image">
-        <img src={this.props.questionimage} />
+        <img src={props.question.questionimage} />
       </picture>
+      { props.question.answers.map( (a) => ( 
+                        <Answer answers={a}/>
+                    ))};
     </div>
   );
 }

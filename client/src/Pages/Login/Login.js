@@ -4,7 +4,7 @@ import Answer from '../../Components/Answer/Answer'
 import Input from '../../Components/Input/Input';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
-import Question from '../../Components/Question/Question';
+// import Question from '../../Components/Question/Question';
 
 
 class Login extends Component {    
