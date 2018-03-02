@@ -10,13 +10,13 @@ const Question = (props) => {
 return (
     <div className="question">
       <div className="question-text">
-        <h1>{props.question.question}</h1>
+          <h1>{props.question.question}</h1>
       </div>
       <div className="question-code">
-        <h3>{props.question.questioncode}</h3>
+          <h3>{props.question.questioncode}</h3>
       </div>
       <picture className="question-image">
-        <img src={props.question.questionimage} />
+          <img src={props.question.questionimage} />
       </picture>
       { props.question.answers.map( (a) => ( 
                         <Answer answers={a}/>
