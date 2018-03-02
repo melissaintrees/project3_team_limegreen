@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Answer from '../../Components/Answer/Answer'
 import Input from '../../Components/Input/Input';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
+import Question from '../../Components/Question/Question';
 
 
 class Login extends Component {    
@@ -57,6 +59,8 @@ class Login extends Component {
               />
                 <ContinueBtn 
                 onClick={this.handleFormSubmit}
+                />
+                <Answer
                 />
             </div>
         );

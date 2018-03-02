@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Answer from '../../Components/Answer/Answer';
 // import Question from '../Components/Game/Question';
-// import  questions from './../mockdata/gameQuestions';
+import cssCategory from '../../mockdata/questions';
+// console.log(cssCategory);
 import axios from 'axios';
 import AdvanceBtn from '../../Components/AdvanceBtn/AdvanceBtn'
 
@@ -11,26 +12,45 @@ class GameApp extends Component {
         super(props);
 
         this.state = {
-            question: "here",
-            answer: "testing",
-            answerState: 1,
+            question: "",
+            answers: [],
         };
     }
 
-    getAnswer = () => {
-        axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + 2)
-            .then((response) => {
-                console.log(response);
-                this.setState({
-                    question: response.data[0].questions,
-                    answer: response.data[0].answer0,
-                    answerState: this.state.answerState++
-                });
+    componentDidMount = () => {
+        const answersArray = cssCategory.questions.map((questionObject)=>{
+            return questionObject.answers;
             })
-            .catch(function (error) {
-                console.log(error);
-            });
+        const questionFromJSON  = cssCategory.questions.question;
+        const answersFromJSON = cssCategory.questions.answers;
+        this.setState({question: questionFromJSON, answers: answersArray})
+            // .then((response) => {
+            //     console.log(response);
+            //     this.setState({
+            //         question: response.data[0].questions,
+            //         answer: response.data[0].answer0,
+            //         answerState: this.state.answerState++
+            //     });
+            // })
+            // .catch(function (error) {
+            //     console.log(error);
+            // });
     };
+
+    // getAnswer = () => {
+    //     axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + 2)
+    //         .then((response) => {
+    //             console.log(response);
+    //             this.setState({
+    //                 question: response.data[0].questions,
+    //                 answer: response.data[0].answer0,
+    //                 answerState: this.state.answerState++
+    //             });
+    //         })
+    //         .catch(function (error) {
+    //             console.log(error);
+    //         });
+    // };
 
     render() {
         return (
@@ -39,9 +59,9 @@ class GameApp extends Component {
                     {/* <Question value={this.state.question} /> */}
                 </h1>
                 <h2>
-                    <Answer value={this.state.answer} />
+                    <Answer value={this.state.answers} />
                 </h2>
-                    <AdvanceBtn onClick={()=> this.getAnswer()} />
+                    {/* <AdvanceBtn onClick={()=> this.getAnswer()} /> */}
             </div>
         );
     };
