@@ -17,13 +17,30 @@ class CategoryOptions extends Component {
     render() {
         return (
             <div>
-				<AppHeader
-				/>
-                <Categories
-				/>
-                <LogoutBtn
-                />
-            </div>
+
+            <div className="container">
+                <div className="row ">
+
+                    <div className="col-0 col-lg-3"></div>
+                    <div className="col-12 col-lg-6">
+                        <AppHeader
+                        /> 
+                            <div className="text-center border categ-content-div">
+                                <h5>Pick a super fun category!</h5>
+                            <Categories
+                            />
+                            <LogoutBtn
+                            />
+
+                            </div>
+                
+                    </div>
+                    <div className="col-0 col-lg-3"></div>
+                </div>
+
+                </div>
+            </div>                
+        
 
         );
     };
