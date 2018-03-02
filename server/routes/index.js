@@ -2,6 +2,9 @@ const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 const userRoutes = require("./user");
+const express = require("express");
+
+router.use("/", express.static(path.join(__dirname, 'client/build')));
 
 // API Routes
 router.use("/api", apiRoutes);
