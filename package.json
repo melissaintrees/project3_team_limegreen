@@ -9,8 +9,8 @@
     "build": "node scripts/build.js",
     "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "installDeps": "yarn && cd client && yarn",
-    "start": "concurrently \"node server.js\" \"npm run client\""
+    "install": "(cd client && yarn) && (cd server && yarn)",
+  "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd server && PORT=3001 yarn start\""
   },
   "author": "",
   "license": "ISC",
