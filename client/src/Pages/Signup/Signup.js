@@ -3,6 +3,7 @@ import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 import Input from '../../Components/Input/Input';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 
 class Signup extends Component {    
@@ -117,11 +118,13 @@ class Signup extends Component {
                                     </div>
                                     <div className="form-group">
                                         <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
-                                            {/* this event handler goes in the continue component but was commented out to get the links working  */}
-                                            {/* {/* onClick={this.handleFormSubmit}}                                            */}
-                                            <ContinueBtn
-                                                
-                                            />
+                                            {/* Originally in the cont. btn. comp. but removed to get link working */}
+                                            {/* onClick={this.handleFormSubmit}  */}
+                                                <Link to="/categories">
+                                                    <ContinueBtn
+                                                    
+                                                    />
+                                                </Link>
                                         </div>
                                     </div>
                                 </form>
