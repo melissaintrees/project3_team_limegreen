@@ -1,0 +1,9 @@
+.answerOption {
+    text-align: center;
+    background-color: #ffd93c;
+    color: white;
+    /* margin: 25px; */
+    padding: 15px 15px;
+    margin: 15px 15px;
+    font-size: medium;
+}
