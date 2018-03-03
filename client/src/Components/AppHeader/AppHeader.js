@@ -6,7 +6,7 @@ const AppHeader = props => (
         <div className="appheader">
             
             <h2 class="title2">
-                <span class="glyphicon glyphicon-arrow-left pull-left" aria-hidden="true"></span>CODE STARS
+               CODE STARS
             </h2>
                 
         </div>

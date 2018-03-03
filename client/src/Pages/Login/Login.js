@@ -4,7 +4,7 @@ import Answer from '../../Components/Answer/Answer'
 import Input from '../../Components/Input/Input';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
-// import Question from '../../Components/Question/Question';
+import { Link } from "react-router-dom";
 
 
 class Login extends Component {    
@@ -45,6 +45,7 @@ class Login extends Component {
             <div>
                  {/* html for the login form: */}
                 <div className="container">
+                   
                     <div className="row ">
                         <div className="col-0 col-lg-3"></div>
                         <div className="col-12 col-lg-6">
@@ -81,25 +82,20 @@ class Login extends Component {
                                     </div>
                                     <div className="form-group">
                                         <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
-                                            <ContinueBtn
-                                                onClick={this.handleFormSubmit}
-                                            />
+                                            {/* this event handler goes in the continuebtn component but was commented out to get the links working */}
+                                            {/* onClick={this.handleFormSubmit} */}
+                                            <Link to="/categories">
+                                                <ContinueBtn  
+                                                />
+                                            </Link>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                             <div className="col-0 col-lg-3"></div>
                         </div>
-
-                        <div className="row">
-                            <div className="col-0 col-lg-3"></div>
-                            <div className="col-12 col-lg-6 ">
-
-                            </div>
-                            <div className="col-0 col-lg-3"></div>
-                        </div>
-
                     </div>
+
                 </div>
             </div>
         );
