@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Answer from '../../Components/Answer/Answer'
 import Input from '../../Components/Input/Input';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+>>>>>>> d177b3a476dd1e62f201a6530373a29d624160b1
 
 
 class Login extends Component {    

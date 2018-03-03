@@ -1,9 +1,5 @@
 import React from 'react';
 import "./Answer.css"
-//answer extend component and pass in props
-
-// import PropTypes from 'prop-types';
-// import cssCategory from '../../mockdata/questions';
 
 // Answer component for quiz. Creates radio button selection.
 const Answer = props => {

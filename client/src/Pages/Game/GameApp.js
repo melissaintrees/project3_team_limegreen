@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { cssCategory } from '../../mockdata/questions';
 import Question from '../../Components/Question/Question';
+// import Results form '../../Components/Results/Results';
 // import axios from 'axios';
 // import AdvanceBtn from '../../Components/AdvanceBtn/AdvanceBtn';
 
@@ -12,10 +13,12 @@ class GameApp extends Component {
         this.state = {
             category: "cssCategory",
             questions: cssCategory.questions,
+            userAnswers: [],
+            score: 0,
             // answersOptions: [],
-            // correctAnswer: "",
+            correctAnswer: cssCategory.questions.correctAnswer,
         };
-        // this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+        this.userSelectionClick = this.userSelectionClick.bind(this);
     };
 
 
@@ -30,9 +33,14 @@ class GameApp extends Component {
     //     });
     // };
 
-    // handleAnswerSelected(event) {
-    //     console.log("Add logic");
-    // };
+    userSelectionClick(e) {
+        const userIsCorrect = this.correctAnswer === e.JSON.stingify();
+        console.log(userIsCorrect);
+
+        // if (userIsCorrect &&) {
+
+        // }
+    };
 
     // getAnswer = () => {
     //     axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + 2)
