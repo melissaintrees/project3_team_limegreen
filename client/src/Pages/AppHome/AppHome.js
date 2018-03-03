@@ -20,14 +20,33 @@ class AppHome extends Component {
     render() {
         return (
             <div>
-				<Header
-				/>
-                <HomePage
-				/>
-                <SignupBtn
-                />
-                <LoginBtn
-                />
+                <div className="container">
+                
+                    <div className="row">
+                        <div className="col-0 col-lg-3"></div>
+                        <div className="col-12 col-lg-6 ">
+                            <Header
+                            />
+                            <div className="text-center border main-content-div">
+                                <HomePage
+                                />
+                                <SignupBtn
+                                />
+                                <LoginBtn
+                                />
+                            </div>
+                        </div>
+                        <div className="col-0 col-lg-3"></div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-0 col-lg-3"></div>
+                        <div className="col-12 col-lg-6 "></div>
+                        <div className="col-0 col-lg-3"></div>
+                    </div>
+                
+                </div>
+
             </div>
 
         );
