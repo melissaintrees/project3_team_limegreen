@@ -6,11 +6,19 @@
   "scripts": {
     "install": "cd client && npm install && npm run build && cd ..",
     "client": "node scripts/start-client.js",
+<<<<<<< HEAD
     "build": "node server/scripts/build.js",
     "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "installDeps": "yarn && cd client && yarn",
     "start": "cd server && node server.js"
+=======
+    "build": "node scripts/build.js",
+    "seed": "node scripts/seedDB.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "installDeps": "yarn && cd client && yarn",
+    "start": "node server.js"
+>>>>>>> dff045afec8d5368219b18f0de3cf418b6e4239e
   },
   "author": "",
   "license": "ISC",

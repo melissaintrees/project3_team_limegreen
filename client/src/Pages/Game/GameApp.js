@@ -18,8 +18,7 @@ class GameApp extends Component {
             // answersOptions: [],
             correctAnswer: cssCategory.questions.correctAnswer,
         };
-        // this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
-        // this.nextStep = this.nextStep.bind(this);
+        this.userSelectionClick = this.userSelectionClick.bind(this);
     };
 
 
@@ -34,14 +33,14 @@ class GameApp extends Component {
     //     });
     // };
 
-    // handleAnswerClick(e) {
-    //     const userIsCorrect = questions.correctAnswer === e.target.JSON.stingify();
-    //     console.log(e.target);
+    userSelectionClick(e) {
+        const userIsCorrect = this.correctAnswer === e.JSON.stingify();
+        console.log(userIsCorrect);
 
-    //     // if (userIsCorrect &&) {
+        // if (userIsCorrect &&) {
 
-    //     // }
-    // };
+        // }
+    };
 
     // getAnswer = () => {
     //     axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + 2)
