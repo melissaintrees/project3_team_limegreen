@@ -1,0 +1,45 @@
+.btn-html {
+    background-color: #ffd93c;
+    font-weight: bold;
+    color: #2b3e5c;
+    font-size: 16px;
+    width: 90%;
+    padding: 50px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-css {
+    background-color: #f17934;
+    font-weight: bold;
+    color: #2b3e5c;
+    font-size: 16px;
+    width: 90%;
+    padding: 50px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-loops {
+    background-color: #fa3949;
+    font-weight: bold;
+    color: #2b3e5c;
+    font-size: 16px;
+    width: 90%;
+    padding: 50px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.categ-text {
+    margin: 30px 0;
+}
+
+.img-div-categ {
+    width: 25%;
+    float: left;
+}
