@@ -1,19 +1,23 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import  questions from '../mockdata/gameQuestions';
+import "./Answer.css"
 
 // Answer component for quiz. Creates radio button selection.
-const Answer = (props) =>
-    <ol className="answerOption">
-            <input
-            type="radio"
-            className="radioCustomButton"
-            name="radioGroup"
-            >
-            </input>
-        <label className="radioCustom">
-        {props.value}
-      </label>
-    </ol>;
+const Answer = props => {
+    return (
+    <div className="answerOption">
+        <ul>
+                <input
+                type="radio"
+                className="radioCustomButton"
+                name="radioGroup"
+                // onClick={handleAnswerClick}
+                >
+                </input>
+            <label className="radioCustom">
+                {props.answers}
+            </label>
+        </ul>
+    </div>
+    )};
 
 export default Answer;
