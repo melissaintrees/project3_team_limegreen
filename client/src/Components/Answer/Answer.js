@@ -10,7 +10,7 @@ const Answer = props => {
                 type="radio"
                 className="radioCustomButton"
                 name="radioGroup"
-                // onClick={handleAnswerClick}
+                // onClick={userSelectionClick}
                 >
                 </input>
             <label className="radioCustom">

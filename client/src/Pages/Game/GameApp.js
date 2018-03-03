@@ -63,7 +63,7 @@ class GameApp extends Component {
                 <h1>
                     { this.state.questions.map( (q) => ( 
                         <Question question={q}/>
-                    ))};
+                    ))}
                 </h1>
             </div>
         );
