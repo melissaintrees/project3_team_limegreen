@@ -2,26 +2,36 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Answer from '../Answer';
 
-// import  questions from '../mockdata/gameQuestions';
-
-
 // Map function below goes loops over each video
 const Question = (props) => {
 return (
-    <div className="question">
-      <div className="question-text">
-          <h1>{props.question.question}</h1>
+
+<div class="row">
+  <div class="col-0 col-lg-3"></div>
+  <div class="col-12 col-lg-6">        
+          <div class="card card-sty">
+              <div class="card-body">
+                    <h5 class="card-title qtxt">{props.question.question}</h5>
+                    <h5 class="card-title qtxt">{props.question.questioncode}</h5>
+                  <picture className="question-image">
+                    <img src={props.question.questionimage} />
+                  </picture>
+                  <div class="button-grouping">
+                      <a href="#" class="btn btn-answer text-center">{ props.question.answers.map( (a) => ( 
+                        <Answer
+                          key={question.question.props.children.toString()}
+                          question={question.question}
+                          answers={question.answers}
+                          handleAnswerClick={handleAnswerClick}
+                          answers={a}
+                        />
+                    ))};</a>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div className="question-code">
-          <h3>{props.question.questioncode}</h3>
-      </div>
-      <picture className="question-image">
-          <img src={props.question.questionimage} />
-      </picture>
-      { props.question.answers.map( (a) => ( 
-                        <Answer answers={a}/>
-                    ))};
-    </div>
+  <div class="col-0 col-lg-3"></div>
+</div>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { cssCategory } from '../../mockdata/questions';
 import Question from '../../Components/Question/Question';
+// import Results form '../../Components/Results/Results';
 // import axios from 'axios';
 // import AdvanceBtn from '../../Components/AdvanceBtn/AdvanceBtn';
 
@@ -12,10 +13,13 @@ class GameApp extends Component {
         this.state = {
             category: "cssCategory",
             questions: cssCategory.questions,
+            userAnswers: [],
+            score: 0,
             // answersOptions: [],
-            // correctAnswer: "",
+            correctAnswer: cssCategory.questions.correctAnswer,
         };
         // this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+        // this.nextStep = this.nextStep.bind(this);
     };
 
 
@@ -30,8 +34,13 @@ class GameApp extends Component {
     //     });
     // };
 
-    // handleAnswerSelected(event) {
-    //     console.log("Add logic");
+    // handleAnswerClick(e) {
+    //     const userIsCorrect = questions.correctAnswer === e.target.JSON.stingify();
+    //     console.log(e.target);
+
+    //     // if (userIsCorrect &&) {
+
+    //     // }
     // };
 
     // getAnswer = () => {

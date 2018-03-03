@@ -1,13 +1,59 @@
-header {
-    background-color: #ffd93c;
-}
 
 .appheader {
     background-color: #ffd93c;
+    padding: 15px;
+    
+}
+
+.title2 {
+    color: dodgerblue;
+    font-size: 26px;
+    font-weight: bold;
     text-align: center;
 }
 
-.title {
-    color: #4a80c5;
-    font-size: 26px;
+.signup-content-div {
+    background-color: #2b3e5c;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sign-up-bg {
+    background-color: #fd721b;
+    margin: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sign-up-bg h3 {
+    padding: 50px 0 20px 0;
+}
+
+.help-block {
+    padding: 20px 0 50px 0;
+    margin: 0 50px 0 50px;
+}
+
+.login-bg {
+    background-color: #ffd93c;
+    margin: 30px;
+    padding-top: 142px;
+    padding-bottom: 142px;
+}
+
+.login-bg h3 {
+    margin: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.categ-content-div {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+    
+.categ-content-div h5{
+    font-size: 20px;
+    font-weight: bold;
 }
