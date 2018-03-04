@@ -10,7 +10,7 @@ const QuestionList = ({ props, userSelectionClick }) => {
             key={cssCategory.questions.question.props.children.toString()}
             question={cssCategory.questions.question}
             answers={cssCategory.questions.answers}
-            userSelectionClick={userSelectionClick
+            userSelectionClick={userSelectionClick}
           />
         );
       })}
