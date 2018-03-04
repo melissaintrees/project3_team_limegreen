@@ -12,10 +12,10 @@ return (
           <div class="card card-sty">
               <div class="card-body">
                     <h5 class="card-title qtxt">{props.question.question}</h5>
-                    {/* <h5 class="card-title qtxt">{props.question.questioncode}</h5> */}
-                  {/* <picture className="question-image">
+                    <h5 class="card-title qtxt">{props.question.questioncode}</h5>
+                  <picture className="question-image">
                     <img src={props.question.questionimage} />
-                  </picture> */}
+                  </picture>
                   <div class="button-grouping">
                   { props.question.answers.map( (a) => ( 
                         <Answer answers={a}/>
