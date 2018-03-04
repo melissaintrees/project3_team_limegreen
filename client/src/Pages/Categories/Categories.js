@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Categories from '../../Components/Categories/Categories';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import LogoutBtn from '../../Components/LogoutBtn/LogoutBtn';
+import { Link } from "react-router-dom";
 
 class CategoryOptions extends Component {    
     constructor(props) {

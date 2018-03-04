@@ -3,6 +3,7 @@ import Header from '../../Components/Header/Header';
 import HomePage from '../../Components/HomePage/HomePage';
 import LoginBtn from '../../Components/LoginBtn/LoginBtn';
 import SignupBtn from '../../Components/SignupBtn/SignupBtn';
+import { Link } from "react-router-dom";
 
 
 
@@ -38,15 +39,8 @@ class AppHome extends Component {
                         </div>
                         <div className="col-0 col-lg-3"></div>
                     </div>
-
-                    <div className="row">
-                        <div className="col-0 col-lg-3"></div>
-                        <div className="col-12 col-lg-6 "></div>
-                        <div className="col-0 col-lg-3"></div>
-                    </div>
                 
                 </div>
-
             </div>
 
         );

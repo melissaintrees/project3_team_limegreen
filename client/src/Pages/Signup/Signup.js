@@ -3,6 +3,7 @@ import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 import Input from '../../Components/Input/Input';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 
 class Signup extends Component {    
@@ -26,28 +27,36 @@ class Signup extends Component {
     
       handleFormSubmit = event => {
         event.preventDefault();
-        if (this.state.email && this.state.username && this.state.password && this.state.confirmpassword) {
-            axios.post('/signup', {
-                email: this.state.email,
-                username: this.state.username,
-                password: this.state.password,
-                confirmpassword: this.state.confirmpassword
-              })
-              .then(function (response) {
-                console.log(response);
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
+        if (this.state.email && this.state.username && this.state.password.length > 0 && this.state.confirmpassword.length > 0 && this.confirmPassword()) {
+            console.log("Form success");
+            // React Redirect to Categories
+
+            // axios.post('/signup', {
+            //     email: this.state.email,
+            //     username: this.state.username,
+            //     password: this.state.password,
+            //     confirmpassword: this.state.confirmpassword
+            //   })
+            //   .then(function (response) {
+            //     console.log(response);
+            //     // React Redirect to Categories
+            //   })
+            //   .catch(function (error) {
+            //     console.log(error);
+            //   });
+        }
+        else {
+            alert("Form is invalid")
         }
       };
 
-      confirmPassword = () => {
+      confirmPassword = (event) => {
         if (this.state.password === this.state.confirmpassword) {
-            this.handleFormSubmit();
+            return  true;
         }
         else {
             alert("Your password does not match. Please enter matching passwords")
+            return false;
         }
     };
 
@@ -105,7 +114,7 @@ class Signup extends Component {
                                             <div className="col-sm-8 col-xs-10">
                                                 <Input
                                                     value={this.state.confirmpassword}
-                                                    onChange={this.confirmPassword}
+                                                    onChange={this.handleInputChange}
                                                     name="confirmpassword"
                                                     placeholder="Confirm Password"
                                                 />
@@ -117,9 +126,11 @@ class Signup extends Component {
                                     </div>
                                     <div className="form-group">
                                         <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
-                                        <ContinueBtn
-                                            onClick={this.handleFormSubmit}
-                                        />
+                                            {/* Originally in the cont. btn. comp. but removed to get link working */}
+                                            {/* onClick={this.handleFormSubmit}  */}
+                                                    <ContinueBtn onClick={this.handleFormSubmit}
+                                                    
+                                                    />
                                         </div>
                                     </div>
                                 </form>
