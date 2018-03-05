@@ -14,7 +14,7 @@ const Answer = props => {
                 >
                 </input>
             <label className="radioCustom">
-                {props.answers}
+                {props.answerOptions}
             </label>
         </ul>
     </div>
