@@ -5,8 +5,10 @@ import GameApp from './Pages/Game/GameApp';
 import AppHome from './Pages/AppHome/AppHome';
 import Login from './Pages/Login/Login';
 import ScoreResults from './Pages/Score/Score';
+import ScoreTwo from './Pages/ScoreTwo/ScoreTwo';
 import Signup from './Pages/Signup/Signup';
 import GameTwo from './Pages/GameTwo/GameTwo'
+import Game from './Pages/Game/Game'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () =>
@@ -20,6 +22,7 @@ const App = () =>
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Categories" component={Categories} />
         <Route exact path="/Score" component={ScoreResults} />
+        <Route exact path="/scoretwo" component={ScoreTwo} />
       </Switch>
     </div>
   </Router>;

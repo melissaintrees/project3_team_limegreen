@@ -3,6 +3,12 @@
 .card-sty {
     background-color: #ffd93c;
     padding-bottom: 20px;
+    width: 90%;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .qtxt {
@@ -10,7 +16,8 @@
     font-weight: bold;
     font-size: 22px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
+    
 }
 
 .button-grouping {
@@ -22,11 +29,13 @@
 .btn-answer3,
 .btn-answer4 {
     color: white;
-    /* margin: 25px; */
-    width: 250px;
+    width: 210px;
     padding: 15px 15px;
-    margin: 15px 15px;
+    margin: 5px 5px;
+    text-transform: uppercase;
+    font-size: 10px;
 }
+
 
 .btn-answer1 {
     background-color: #2b3e5c;
@@ -44,13 +53,12 @@
     background-color: #fd721b;
 }
 
-.categ-content-div {
+.quest-content-div h5 {
+    padding-bottom: 10px;
+}
+
+.quest-content-div {
     background-color: white;
     padding-top: 20px;
     padding-bottom: 20px;
-}
-
-.categ-content-div h5 {
-    font-size: 20px;
-    font-weight: bold;
 }

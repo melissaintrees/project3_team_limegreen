@@ -18,8 +18,8 @@ class CategoryOptions extends Component {
     render() {
         return (
             <div>
-
             <div className="container">
+                
                 <div className="row ">
 
                     <div className="col-0 col-lg-3"></div>
