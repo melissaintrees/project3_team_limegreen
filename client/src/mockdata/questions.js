@@ -1,7 +1,11 @@
 // import React from 'react';
 
 export const cssCategory = {
+<<<<<<< HEAD
     lessonVideo: "https://youtu.be/8Hw9wTE4Pxk",
+=======
+    lessonVideo: "https://youtu.be/Nc31NAujTkAnpm",
+>>>>>>> 6045e4121ff3018691cefd8567f9bf286ad19ead
     questions: [
         {   
             type: "multipleChoice",

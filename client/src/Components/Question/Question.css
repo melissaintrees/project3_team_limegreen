@@ -15,7 +15,7 @@
 
 .btn-answer1, .btn-answer2, .btn-answer3, .btn-answer4 {
     color: white;
-    /* margin: 25px; */
+    margin: 25px;
     width:110px;
     padding: 15px 15px;
     margin: 15px 15px;

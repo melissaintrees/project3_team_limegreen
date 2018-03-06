@@ -1,9 +1,13 @@
 import React from "react";
 import "./QuestionsTwo.css";
 import cssCategory from '../../mockdata/questions'
-
-const QuestionsTwo = props => (
+    // var quest;
+    // for (var questions in cssCategory.questions) {
+    //         console.log(questions.question[quest]);
+    //     }
     
+const QuestionsTwo = props => (
+  
     <div class="card card-sty">
         <div class="card-body">
             <h5 class="card-title qtxt">{cssCategory.questions[0].question}</h5>

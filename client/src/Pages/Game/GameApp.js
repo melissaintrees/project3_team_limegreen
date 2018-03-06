@@ -16,7 +16,7 @@ class GameApp extends Component {
             userAnswers: [],
             score: 0,
         };
-        this.userSelectionClick = this.userSelectionClick.bind(this);
+        // this.userSelectionClick = this.userSelectionClick.bind(this);
     };
 
 
@@ -66,7 +66,7 @@ class GameApp extends Component {
         );
     };
 
-// End GameApp    
+    // End GameApp    
 };
 
 export default GameApp;
