@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import AppHeader from '../../Components/AppHeader/AppHeader';
-import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
+import PlayAgnBtn from '../../Components/PlayAgnBtn/PlayAgnBtn';
 import LogoutBtn from '../../Components/LogoutBtn/LogoutBtn';
-// import Score from '../../Components/Score/Score';
+import ScoreTwoComp from '../../Components/ScoreTwoComp/ScoreTwoComp';
+import allUsersScores from '../../mockdata/userstats'
 
-class ScoreTwoResults extends Component {
+class ScoreTwo extends Component {
     constructor(props) {
         super(props);
 
@@ -17,15 +18,36 @@ class ScoreTwoResults extends Component {
 
     render() {
         return (
-            <div>
-                <AppHeader
-                />
-                <LogoutBtn
-                />
+        <div>
+
+            <div className="container">
+                <div className="row">
+
+                    <div className="col-0 col-lg-3"></div>
+                    <div className="col-12 col-lg-6 ">
+                        <AppHeader />
+                        <div className="text-center border signup-content-div">
+                            <div className="score-bg">
+                                <h5>Congrats! You have earnedpoints!</h5>
+                                <h5>Your all time score is: {allUsersScores.score}</h5>
+                                <ScoreTwoComp 
+                                />
+                                <PlayAgnBtn 
+                                />
+                            </div>
+                            
+                            <LogoutBtn 
+                            />
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </div>
 
         );
     };
 };
 
-export default ScoreTwoResults;
+export default ScoreTwo;

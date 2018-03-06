@@ -13,11 +13,11 @@ class GameTwo extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            question: "here",
-            answer: "testing",
-            answerState: 1,
-        };
+        // this.state = {
+        //     question: "here",
+        //     answer: "testing",
+        //     answerState: 1,
+        // };
     }
 
     render() {

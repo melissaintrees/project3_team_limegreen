@@ -2,7 +2,7 @@
 let con = require('../config/connection.js');
 let bcrypt = require('bcrypt-nodejs');
 
-function addUser(userName, password, cb, res){
+function addUser(userName, password, email, cb, res){
     console.log(userName);
     res.setHeader('Access-Control-Allow-Origin', '*');
 
@@ -20,7 +20,7 @@ function addUser(userName, password, cb, res){
         let newPassword = bcryptedPassword;
         console.log(newPassword);
 
-        let sql = `INSERT INTO users (user_name, password, email) VALUES ("${userName}", "${newPassword}", "testing");`
+        let sql = `INSERT INTO users (user_name, password, email) VALUES ("${userName}", "${newPassword}", "${email}");`
 
         con.query(sql, function (err, result) {
             if (err) throw err;

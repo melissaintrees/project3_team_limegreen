@@ -18,7 +18,7 @@ class GameApp extends Component {
             // answersOptions: [],
             correctAnswer: cssCategory.questions.correctAnswer,
         };
-        this.userSelectionClick = this.userSelectionClick.bind(this);
+        // this.userSelectionClick = this.userSelectionClick.bind(this);
     };
 
 
@@ -33,14 +33,14 @@ class GameApp extends Component {
     //     });
     // };
 
-    userSelectionClick(e) {
-        const userIsCorrect = this.correctAnswer === e.JSON.stingify();
-        console.log(userIsCorrect);
+    // userSelectionClick(e) {
+    //     const userIsCorrect = this.correctAnswer === e.JSON.stingify();
+    //     console.log(userIsCorrect);
 
-        // if (userIsCorrect &&) {
+    //     // if (userIsCorrect &&) {
 
-        // }
-    };
+    //     // }
+    // };
 
     // getAnswer = () => {
     //     axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + 2)
@@ -61,15 +61,15 @@ class GameApp extends Component {
         return (
             <div>
                 <h1>
-                    { this.state.questions.map( (q) => ( 
-                        <Question question={q}/>
-                    ))};
+                    {this.state.questions.map((q) => (
+                        <Question question={q} />
+                    ))}
                 </h1>
             </div>
         );
     };
 
-// End GameApp    
+    // End GameApp    
 };
 
 export default GameApp;
