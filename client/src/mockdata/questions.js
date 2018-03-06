@@ -3,11 +3,11 @@
 export const cssCategory = {
     lessonVideo: "https://www.youtube.com/watch?v=NLZRYQMLDW4",
     questions: [
-        {
+        {   
             type: "multipleChoice",
             question: "What is CSS?",
             answerOptions: ["It is a how text appears.", "Some random letters.", "It stands for Cool-Singing-Sheep.", "How we add style to a page."],
-            correctAnswer: "How we add style to page."
+            correctAnswer: "How we add style to a page."
         },
         {
             type: "multipleChoice",

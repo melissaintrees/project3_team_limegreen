@@ -12,35 +12,24 @@ class GameApp extends Component {
 
         this.state = {
             category: [],
-            questions: cssCategory.questions,
+            questions: [],
             userAnswers: [],
             score: 0,
-            // answersOptions: [],
-            correctAnswer: cssCategory.questions.correctAnswer,
         };
-        // this.userSelectionClick = this.userSelectionClick.bind(this);
+        this.userSelectionClick = this.userSelectionClick.bind(this);
     };
 
 
-    // componentDidMount = () => {
-    //     const answersOptions = cssCategory.questions.map((questionObject)=>{
-    //         const questionFromJSON  = questionObject.question;
-    //         // const answersFromJSON = questionObject.answers;
-    //         this.setState({
-    //             question: questionFromJSON, 
-    //             // answerOptions: answersFromJSON
-    //         });
-    //     });
-    // };
+    componentDidMount = () => {
+        this.setState({
+            questions: cssCategory.questions
+        })
+    };
 
-    // userSelectionClick(e) {
-    //     const userIsCorrect = this.correctAnswer === e.JSON.stingify();
-    //     console.log(userIsCorrect);
-
-    //     // if (userIsCorrect &&) {
-
-    //     // }
-    // };
+    userSelectionClick(event) {
+        this.setState
+        console.log(event.target.value)
+    };
 
     // getAnswer = () => {
     //     axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + 2)
@@ -65,6 +54,7 @@ class GameApp extends Component {
                         <Question 
                         question={q}
                         questionIndex={index + 1}
+                        userSelectionClick={this.userSelectionClick}
                         />
                     ))}
                 </h1>

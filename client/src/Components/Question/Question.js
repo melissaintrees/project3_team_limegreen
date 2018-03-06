@@ -13,6 +13,7 @@ return (
                         <Answer 
                           answerOptions={a}
                           questionIndex={props.questionIndex}
+                          userSelectionClick={props.userSelectionClick}
                         />
                     ))}
               </div>

@@ -11,7 +11,8 @@ const Answer = (props) => {
                 type="radio"
                 className="radioCustomButton"
                 name={questionGroup}
-                // onClick={userSelectionClick}
+                onChange={props.userSelectionClick}
+                value={props.answerOptions}
                 >
                 </input>
             <label className="radioCustom">
