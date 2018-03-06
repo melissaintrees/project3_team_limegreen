@@ -1,7 +1,7 @@
 // import React from 'react';
 
 export const cssCategory = {
-    lessonVideo: "https://www.youtube.com/watch?v=NLZRYQMLDW4",
+    lessonVideo: "https://youtu.be/8Hw9wTE4Pxk",
     questions: [
         {   
             type: "multipleChoice",
@@ -48,13 +48,13 @@ export const cssCategory = {
         {
             type: "multipleChoice",
             question: "What code would create an orange outline for this code: <h4>Add an outline!</h4>?",
-            answerOptions: ["h3 {outline-color: red}", "h2 {outline-color: red}", "h4 {outline-color: orange}", "h1 {color: red}"],
+            answerOptions: ["h3 {outline-color: red}", "h2 {outline-color: blue}", "h4 {outline-color: orange}", "h1 {color: red}"],
             correctAnswer: "h4 {outline-color: orange}"
         },
         {
             type: "multipleChoice",
             question: "What code would add a blue background to the entire body of our code?",
-            answerOptions: ["body {background-color: green}", "body {background-color: red}", "body {color: blue}", "body {background-color: blue}"],
+            answerOptions: ["body {color: blue}", "body {background-color: red}", "body {color: blue}", "body {background-color: blue}"],
             correctAnswer: "body {background-color: blue}"
         },
         {
