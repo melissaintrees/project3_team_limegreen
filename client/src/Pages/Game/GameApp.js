@@ -27,6 +27,7 @@ class GameApp extends Component {
     };
 
     userSelectionClick(event) {
+        const {questions, userAnswers} = this.state;
         if (event.target.value === this.cssCategory.questions.correctAnswer) {
             console.log("add one")
         }
