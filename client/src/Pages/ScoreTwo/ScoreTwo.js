@@ -18,30 +18,33 @@ class ScoreTwo extends Component {
 
     render() {
         return (
-<div>
-    <div className="container">
+        <div>
 
-        <div className="row">
+            <div className="container">
+                <div className="row">
 
-            <div className="col-0 col-lg-3"></div>
+                    <div className="col-0 col-lg-3"></div>
+                    <div className="col-12 col-lg-6 ">
+                        <AppHeader />
+                        <div className="text-center border signup-content-div">
+                            <div className="score-bg">
+                                <h5>Congrats! You have earnedpoints!</h5>
+                                <h5>Your all time score is: {allUsersScores.score}</h5>
+                                <ScoreTwoComp 
+                                />
+                                <PlayAgnBtn 
+                                />
+                            </div>
+                            
+                            <LogoutBtn 
+                            />
 
-            <div className="col-12 col-lg-6 ">
-                <AppHeader />
-                <div className="text-center border score-content-div">
-                    <h5>Congrats! You have earnedpoints!</h5>
-                    <h5>Your all time score is: {allUsersScores.score}</h5>
-                    <ScoreTwoComp />
-                    <div class="random">
-                        <PlayAgnBtn />
+                        </div>
                     </div>
+
                 </div>
-
-                <LogoutBtn /> 
             </div>
-
         </div>
-    </div>
-</div>
 
         );
     };
