@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import PlayAgnBtn from '../../Components/PlayAgnBtn/PlayAgnBtn';
 import LogoutBtn from '../../Components/LogoutBtn/LogoutBtn';
-import ScoreTwoComp from '../../Components/ScoreTwoComp/ScoreTwoComp';
-import allUsersScores from '../../mockdata/userstats'
+// import allUsersScores from '../../mockdata/userstats'
+import AllTimeScore from '../../Components/AllTimeScore/AllTimeScore';
+// import Score from '../../Components/Score/Score';
 
 class ScoreTwo extends Component {
     constructor(props) {
@@ -28,10 +29,12 @@ class ScoreTwo extends Component {
                         <AppHeader />
                         <div className="text-center border signup-content-div">
                             <div className="score-bg">
-                                <h5>Congrats! You have earnedpoints!</h5>
-                                <h5>Your all time score is: {allUsersScores.score}</h5>
-                                <ScoreTwoComp 
+                                
+                                <AllTimeScore
                                 />
+                                <h5>you won some points!</h5>
+                                {/* <Score 
+                                /> */}
                                 <PlayAgnBtn 
                                 />
                             </div>
