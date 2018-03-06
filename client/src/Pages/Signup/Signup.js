@@ -5,7 +5,6 @@ import Input from '../../Components/Input/Input';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
-
 class Signup extends Component {    
     constructor(props) {
         super(props);
@@ -31,26 +30,25 @@ class Signup extends Component {
             console.log("Form success");
             // React Redirect to Categories
 
-            // axios.post('/signup', {
-            //     email: this.state.email,
-            //     username: this.state.username,
-            //     password: this.state.password,
-            //     confirmpassword: this.state.confirmpassword
-            //   })
-            //   .then(function (response) {
-            //     console.log(response);
-            //     // React Redirect to Categories
-            //   })
-            //   .catch(function (error) {
-            //     console.log(error);
-            //   });
+        axios.post('/signup', {
+            email: this.state.email,
+            username: this.state.username,
+            password: this.state.password
+            })
+            .then(function (response) {
+            console.log(response);
+            // React Redirect to Categories
+            })
+            .catch(function (error) {
+            console.log(error);
+            });
         }
         else {
             alert("Form is invalid")
         }
       };
 
-      confirmPassword = (event) => {
+      confirmPassword = () => {
         if (this.state.password === this.state.confirmpassword) {
             return  true;
         }
@@ -125,7 +123,7 @@ class Signup extends Component {
                                         </p>
                                     </div>
                                     <div className="form-group">
-                                        <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
+                                        <div className="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
                                             {/* Originally in the cont. btn. comp. but removed to get link working */}
                                             {/* onClick={this.handleFormSubmit}  */}
                                                     <ContinueBtn onClick={this.handleFormSubmit}
