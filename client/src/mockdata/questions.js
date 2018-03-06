@@ -30,45 +30,39 @@ export const cssCategory = {
         {
             type: "multipleChoice",
             question: "What CSS code would change the color of <h1>Hello World!</h1>?",
-            answerOptions: ["p{color: red}", "h4{color: blue}", "ul{color: red}"],
-            correctAnswer: "h1{color: red}"
+            answerOptions: ["p {color: red}", "h1 {color: red}", "h4 {color: blue}", "ul {color: red}"],
+            correctAnswer: "h1 {color: red}"
         },
         {
             type: "multipleChoice",
-            question: "What code would change the background color of a page to green?",
-            answerOptions: ["background-color: green", "color: green", "Change-Color: GREEN", "background-color: blue"],
-            correctAnswer: "background-color: green"
+            question: "What code would add a dotted outline?",
+            answerOptions: ["outline-style: dashed", "outline-style: solid", "outline-style: ridge", "outline-style: dotted"],
+            correctAnswer: "outline-style: dotted"
         },
         {
             type: "multipleChoice",
-            answerOptions: "What code would make the font of the following code small: <p>Am I small?</p>?",
-            answerOptions: ["p{font-size: large}", "p{font-size: medium}", "p{font-size: small}", "p{font-size: xxx-small}"],
-            correctAnswer: "p{font-size: small}"
+            question: "What code would make this font <p>Elephant</p> small?",
+            answerOptions: ["p {font-size: large}", "p {font-size: medium}", "p {font-size: small}", "p {font-size: xxx-small}"],
+            correctAnswer: "p {font-size: small}"
         },
         {
             type: "multipleChoice",
-            question: "What code would create an outline for this code: <h4>How did you make my outline?</h4>?",
-            answerOptions: ["h3{outline-color: red}", "h2{outline-color: red}", "h4{outline-color: orange}", "h1{color: red}"],
-            correctAnswer: "h4{outline-color: orange}"
+            question: "What code would create an orange outline for this code: <h4>Add an outline!</h4>?",
+            answerOptions: ["h3 {outline-color: red}", "h2 {outline-color: red}", "h4 {outline-color: orange}", "h1 {color: red}"],
+            correctAnswer: "h4 {outline-color: orange}"
+        },
+        {
+            type: "multipleChoice",
+            question: "What code would add a blue background to the entire body of our code?",
+            answerOptions: ["body {background-color: green}", "body {background-color: red}", "body {color: blue}", "body {background-color: blue}"],
+            correctAnswer: "body {background-color: blue}"
+        },
+        {
+            type: "multipleChoice",
+            question: "What code would change the color of the text in <p>This text is blue.</p>?",
+            answerOptions: ["p {color: blue}", "h3 {color: blue}", "h6 {color: blue}", "button {color: blue}"],
+            correctAnswer: "p {color: blue}"
         }
-        // {
-        //     type: "multipleChoice",
-        //     question: "?",
-        //     answerOptions: ["", "", "", ""],
-        //     correctAnswer: ""
-        // },
-        // {
-        //     type: "multipleChoice",
-        //     question: "?",
-        //     answerOptions: ["", "", "", ""],
-        //     correctAnswer: ""
-        // },
-        // {
-        //     type: "multipleChoice",
-        //     question: "?",
-        //     answerOptions: ["", "", "", ""],
-        //     correctAnswer: ""
-        // },
     ]
 };
 
