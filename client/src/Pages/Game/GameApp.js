@@ -11,7 +11,7 @@ class GameApp extends Component {
         super(props);
 
         this.state = {
-            category: "cssCategory",
+            category: [],
             questions: cssCategory.questions,
             userAnswers: [],
             score: 0,
@@ -61,8 +61,11 @@ class GameApp extends Component {
         return (
             <div>
                 <h1>
-                    { this.state.questions.map( (q) => ( 
-                        <Question question={q}/>
+                    { this.state.questions.map( (q, index) => ( 
+                        <Question 
+                        question={q}
+                        questionIndex={index + 1}
+                        />
                     ))}
                 </h1>
             </div>

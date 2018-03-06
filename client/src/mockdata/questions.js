@@ -50,13 +50,25 @@ export const cssCategory = {
             question: "What code would create an outline for this code: <h4>How did you make my outline?</h4>?",
             answerOptions: ["h3{outline-color: red}", "h2{outline-color: red}", "h4{outline-color: orange}", "h1{color: red}"],
             correctAnswer: "h4{outline-color: orange}"
-        },
-        {
-            type: "multipleChoice",
-            question: "CSS can be used to add styles to lists. <or> means this is an ordered list, it will always show the animals in this order. <ul> means that the order of the list does not matter. What code would style the following list code: <ul class='animal'><li>Wallaby</li><li>Giraffe</li><li>Elephant</li><li>Lion</li></ul>?",
-            answerOptions: ["animal {list-style-type: square}", "animal {list-style-type: circle}", "animal {list-style-type: lower alpha}"],
-            correctAnswer: "animal {list-style-type: circle}"
-        },
+        }
+        // {
+        //     type: "multipleChoice",
+        //     question: "?",
+        //     answerOptions: ["", "", "", ""],
+        //     correctAnswer: ""
+        // },
+        // {
+        //     type: "multipleChoice",
+        //     question: "?",
+        //     answerOptions: ["", "", "", ""],
+        //     correctAnswer: ""
+        // },
+        // {
+        //     type: "multipleChoice",
+        //     question: "?",
+        //     answerOptions: ["", "", "", ""],
+        //     correctAnswer: ""
+        // },
     ]
 };
 

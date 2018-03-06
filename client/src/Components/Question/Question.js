@@ -12,6 +12,7 @@ return (
                   { props.question.answerOptions.map( (a) => ( 
                         <Answer 
                           answerOptions={a}
+                          questionIndex={props.questionIndex}
                         />
                     ))}
               </div>
