@@ -1,7 +1,7 @@
 import React from 'react';
 import Question from './Question';
 
-const Game = ({ props, handleAnswerClick }) => {
+const Game = ({ props,  userSelectionClick }) => {
   return (
     <div className="wrapper">
       <header>
