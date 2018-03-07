@@ -12,20 +12,20 @@ export const cssCategory = {
         {
             type: "multipleChoice",
             question: "Do we always have CSS on a page?",
-            answerOptions: ["No, it takes too long", "Yes, if we want there to be any color, animations, or text styles.", "No, we can use HTML to add style", "No, we don't need it to add styles to the page."],
+            answerOptions: ["No, it takes too long.", "Yes, if we want there to be any color, animations, or text styles.", "No, we can use HTML to add style.", "No, we don't need it to add styles to the page."],
             correctAnswer: "Yes, if we want there to be any color, animations, or text styles."
         },
         {
             type: "multipleChoice",
             question: "Can we use CSS to add color, animations, and different text styles?",
-            answerOptions: ["No, CSS can't be used to add images", "Yes! CSS can add all of those things!", "No, CSS can't be used to add animations", "No, CSS is only used to add color."],
+            answerOptions: ["No, CSS can't be used to add images.", "Yes! CSS can add all of those things!", "No, CSS can't be used to add animations.", "No, CSS is only used to add color."],
             correctAnswer: "Yes! CSS can add all of those things!"
         },
         {
             type: "multipleChoice",
             question: "Where do we put our CSS file?",
-            answerOptions: ["In the same file as our HTML", "In the same folder as our HTML, but above.", "In the same folder as our HTML, but below.", "In a separate file, to keep everything organized"],
-            correctAnswer: "In a separate file, to keep everything organized"
+            answerOptions: ["In the same file as our HTML.", "In the same folder as our HTML, but above.", "In the same folder as our HTML, but below.", "In a separate file, to keep everything organized."],
+            correctAnswer: "In a separate file, to keep everything organized."
         },
         {
             type: "multipleChoice",

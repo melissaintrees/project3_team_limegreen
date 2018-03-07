@@ -1,7 +1,7 @@
 import React from 'react';
 import "./SignupForm.css";
 
-const SignupForm = props =>
+const SignupForm = (props) =>
 			<div className="Signup">
 				<form className="ModalForm">
 					<p>

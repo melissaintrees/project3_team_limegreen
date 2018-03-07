@@ -18,28 +18,37 @@ class GameApp extends Component {
             questions: [],
             userAnswers: [],
             score: 0,
+            userSubmit: false,
         };
-        // this.userSelectionClick = this.userSelectionClick.bind(this);
+        this.userSelectionClick = this.userSelectionClick.bind(this);
+        this.userSubmitGame = this.userSubmitGame.bind(this);
     };
 
 
     componentDidMount = () => {
         this.setState({
-            questions: cssCategory.questions
+            questions: cssCategory.questions,
         })
     };
 
-    userSelectionClick(event) {
-        // // const {questions, userAnswers} = this.state;
-        // // if (event.target.value === this.cssCategory.questions.correctAnswer) {
-        // //     console.log("add one")
-        // // }
-        // this.setState
+
+    userSelectionClick = (event) => {
+        this.state.questions[event.target.name].userAnswer = event.target.value;
+
+        if (this.state.questions[event.target.name].userAnswer === this.state.questions[event.target.name].correctAnswer) {
+
+        };
+        
+        console.log(event.target.name);
         console.log(event.target.value)
     };
 
-    sendUserScore() {
+    userSubmitGame = (event) => {
+        this.setState
+    };
 
+
+    sendUserScore() {
         axios.post('/score', {
             score: this.state.score,
             })
@@ -50,7 +59,7 @@ class GameApp extends Component {
             .catch(function (error) {
             console.log(error);
             });
-        }
+        };
         // else {
         //     alert("User is not in database")
         // }
@@ -76,11 +85,8 @@ class GameApp extends Component {
         return (
             <div>
             <div className="container">
-                
                 <div className="row">
-                    
                     <div className="col-0 col-lg-3"></div>
-
                     <div className="col-12 col-lg-6 ">
                         <AppHeader 
                         />
@@ -88,14 +94,14 @@ class GameApp extends Component {
                                 <h5>Watch video then answer questions to win points!</h5>
                             <VideoComp video_url={cssCategory.lessonVideo} 
                             />
-                            <div class="random">
+                            <div className="random">
                             { this.state.questions.map( (q, index) => ( 
                                     <Question 
                                         question={q}
-                                        questionIndex={index + 1}
+                                        questionIndex={index}
                                         userSelectionClick={this.userSelectionClick}
                                     />
-                            ))};
+                            ))}
                                 </div>
                                 <SubmitBtn
                                 />
@@ -105,10 +111,8 @@ class GameApp extends Component {
                     <div className="col-0 col-lg-3"></div>
                 
                 </div>
-            
             </div>
             </div>
-
         );
     };
 

@@ -5,7 +5,7 @@ const AppHeader = props => (
 
         <div className="appheader">
             
-            <h2 class="title2">
+            <h2 className="title2">
                CODE STARS
             </h2>
                 
