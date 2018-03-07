@@ -97,6 +97,8 @@ class GameApp extends Component {
                                     />
                             ))};
                                 </div>
+                                <SubmitBtn
+                                />
                             </div>
                     </div>
 
