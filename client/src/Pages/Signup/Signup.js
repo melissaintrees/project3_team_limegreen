@@ -3,7 +3,9 @@ import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 import Input from '../../Components/Input/Input';
 import axios from 'axios';
-// import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+
+// https://javascriptexamples.info/code/react-router-v4-redirect/
 
 class Signup extends Component {    
     constructor(props) {
@@ -14,6 +16,7 @@ class Signup extends Component {
             username: "",
             password: "",
             confirmpassword: "",
+            fireRedirect: false
         };
     }
 
@@ -24,24 +27,33 @@ class Signup extends Component {
         });
       };
     
+      setSignupSuccess = () => {
+          this.setState( { fireRedirect: true } );
+      }
+
       handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.email && this.state.username && this.state.password.length > 0 && this.state.confirmpassword.length > 0 && this.confirmPassword()) {
             console.log("Form success");
+           
             // React Redirect to Categories
+            this.setSignupSuccess();
 
-        axios.post('/signup', {
-            email: this.state.email,
-            username: this.state.username,
-            password: this.state.password
-            })
-            .then(function (response) {
-            console.log(response);
-            // React Redirect to Categories
-            })
-            .catch(function (error) {
-            console.log(error);
-            });
+        // axios.post('/users/signup', {
+        //     email: this.state.email,
+        //     username: this.state.username,
+        //     password: this.state.password
+            
+        //     })
+        //     .then(function (response) {
+        //        this.setSignupSuccess(); 
+        //     console.log(response);
+
+        //     // React Redirect to Categories
+        //     })
+        //     .catch(function (error) {
+        //     console.log(error);
+        //     });
         }
         else {
             alert("Form is invalid")
@@ -51,6 +63,7 @@ class Signup extends Component {
       confirmPassword = () => {
         if (this.state.password === this.state.confirmpassword) {
             return  true;
+
         }
         else {
             alert("Your password does not match. Please enter matching passwords")
@@ -60,6 +73,8 @@ class Signup extends Component {
 
 
     render() {
+        // const { from } = this.props.location.state || '/'
+        const { fireRedirect } = this.state
         return (
             <div>
 
@@ -126,9 +141,14 @@ class Signup extends Component {
                                         <div className="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
                                             {/* Originally in the cont. btn. comp. but removed to get link working */}
                                             {/* onClick={this.handleFormSubmit}  */}
-                                                    <ContinueBtn onClick={this.handleFormSubmit}
+
+                                                <ContinueBtn onClick={this.handleFormSubmit}
+                                                />
                                                     
-                                                    />
+                                                {fireRedirect && (
+                                                    <Redirect to={'/categories'} />
+                                                )}
+                                        </div><div>
                                         </div>
                                     </div>
                                 </form>

@@ -19,6 +19,7 @@ router.post("/login", function(req, res) {
     // Set to true if you need the website to include cookies in the requests sent
     // to the API (e.g. in case you use sessions)
     res.header('Access-Control-Allow-Credentials', true);
+    console.log('we here')
     console.log(req.body.username);
     users(req.body.username, req.body.password, cb, res);
 });
@@ -29,11 +30,11 @@ router.post("/signup", function(req, res) {
     newUser(req.body.username, req.body.password, req.body.email, cb, res);
   });
 
-router.post("/login", function (req, res) {
-  console.log(req.body.username);
-  console.log(req.body.password);
-  newUser(req.body.username, req.body.password, cb, res);
-});
+// router.post("/login", function (req, res) {
+//   console.log(req.body.username);
+//   console.log(req.body.password);
+//   newUser(req.body.username, req.body.password, cb, res);
+// });
 
 router.get("/userAccount/:token", function(req, res){
   verify(req.params.token);
