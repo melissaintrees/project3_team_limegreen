@@ -19,6 +19,7 @@ router.post("/login", function(req, res) {
     // Set to true if you need the website to include cookies in the requests sent
     // to the API (e.g. in case you use sessions)
     res.header('Access-Control-Allow-Credentials', true);
+    console.log('we here')
     console.log(req.body.username);
     users(req.body.username, req.body.password, cb, res);
 });

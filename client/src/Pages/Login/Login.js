@@ -30,7 +30,7 @@ class Login extends Component {
             console.log("Form Success");
             // React Redirect to Scores
             
-        axios.post('/user/login', {
+        axios.post('/users/login', {
             username: this.state.username,
             password: this.state.password
             })
