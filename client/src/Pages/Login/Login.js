@@ -4,12 +4,18 @@ import Input from '../../Components/Input/Input';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { Link } from "react-router-dom";
 =======
 import { withRouter } from "react-router-dom";
 
 // https://javascriptexamples.info/code/react-router-v4-redirect/
 >>>>>>> b7d6f6ade6f45450813ea8e1ab43485e797e035e
+=======
+import { withRouter } from "react-router-dom";
+
+// https://javascriptexamples.info/code/react-router-v4-redirect/
+>>>>>>> a913fa0d1f7e17e33b724400dd56f9606fedf3ac
 
 class Login extends Component {    
     constructor(props) {
