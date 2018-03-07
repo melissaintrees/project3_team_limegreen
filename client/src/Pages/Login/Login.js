@@ -35,6 +35,11 @@ class Login extends Component {
             password: this.state.password
             })
             .then(function (response) {
+                if (response == true){
+                    this.props.history.push('/scoretwo');
+                } else {
+                    console.log("have you signed up yet?");
+                }
             console.log(response);
             //React Redirect to Scores
             })
