@@ -3,7 +3,7 @@ import axios from 'axios';
 import Input from '../../Components/Input/Input';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 class Login extends Component {    
     constructor(props) {

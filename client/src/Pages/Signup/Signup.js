@@ -3,7 +3,7 @@ import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 import Input from '../../Components/Input/Input';
 import axios from 'axios';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 class Signup extends Component {    
     constructor(props) {
