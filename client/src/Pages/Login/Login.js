@@ -3,7 +3,9 @@ import axios from 'axios';
 import Input from '../../Components/Input/Input';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+
+// https://javascriptexamples.info/code/react-router-v4-redirect/
 
 class Login extends Component {    
     constructor(props) {
@@ -89,7 +91,7 @@ class Login extends Component {
                                             {/* this event handler goes in the continuebtn component but was commented out to get the links working */}
                                             {/* onClick={this.handleFormSubmit} */}                    
                                             <ContinueBtn 
-                                            onClick={this.handleFormSubmit} 
+                                            onClick={this.handleFormSubmit.bind(this)} 
                                             
                                             />
                                         </div>
@@ -106,4 +108,4 @@ class Login extends Component {
     };
 };
 
-export default Login;
+export default withRouter(Login);

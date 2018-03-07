@@ -29,11 +29,11 @@ router.post("/signup", function(req, res) {
     newUser(req.body.username, req.body.password, req.body.email, cb, res);
   });
 
-router.post("/login", function (req, res) {
-  console.log(req.body.username);
-  console.log(req.body.password);
-  newUser(req.body.username, req.body.password, cb, res);
-});
+// router.post("/login", function (req, res) {
+//   console.log(req.body.username);
+//   console.log(req.body.password);
+//   newUser(req.body.username, req.body.password, cb, res);
+// });
 
 router.get("/userAccount/:token", function(req, res){
   verify(req.params.token);
