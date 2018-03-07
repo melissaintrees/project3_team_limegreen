@@ -3,7 +3,9 @@ import AppHeader from '../../Components/AppHeader/AppHeader';
 import PlayAgnBtn from '../../Components/PlayAgnBtn/PlayAgnBtn';
 import LogoutBtn from '../../Components/LogoutBtn/LogoutBtn';
 import ScoreComp from '../../Components/ScoreComp/ScoreComp';
-import allUsersScores from '../../mockdata/userstats'
+import { score } from '../Game/GameApp';
+import allUsersScores from '../../mockdata/userstats';
+
 
 class Score extends Component {
     constructor(props) {
@@ -19,7 +21,6 @@ class Score extends Component {
     render() {
         return (
         <div>
-
             <div className="container">
                 <div className="row">
 
@@ -29,19 +30,16 @@ class Score extends Component {
                         <div className="text-center border signup-content-div">
                             <div className="score-bg">
                                 <h5>Congrats! You have earned points!</h5>
-                                <h5>Your all time score is: {allUsersScores.score}</h5>
+                                <h5>Your all time score is: {this.state.score}</h5>
                                 <ScoreComp 
                                 />
                                 <PlayAgnBtn 
                                 />
                             </div>
-                            
                             <LogoutBtn 
                             />
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

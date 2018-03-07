@@ -3,7 +3,8 @@ import "./Answer.css"
 
 // Answer component for quiz. Creates radio button selection.
 const Answer = (props) => {
-    const questionGroup = `questionIdentifier${props.questionIndex}`;
+    const questionGroup = `${props.questionIndex}`;
+    this.questionGroup = props.questionIndex;
     return (
     <div className="answerOption">
         <ul>
