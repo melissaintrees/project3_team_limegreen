@@ -29,12 +29,17 @@ class Login extends Component {
         if (this.state.username && this.state.password) {
             console.log("Form Success");
             // React Redirect to Scores
-            this.props.history.push('/scoretwo');
-        axios.post('/login', {
+            
+        axios.post('/users/login', {
             username: this.state.username,
             password: this.state.password
             })
             .then(function (response) {
+                if (response == true){
+                    this.props.history.push('/scoretwo');
+                } else {
+                    console.log("have you signed up yet?");
+                }
             console.log(response);
             //React Redirect to Scores
             })

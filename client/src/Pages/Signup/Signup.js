@@ -27,27 +27,33 @@ class Signup extends Component {
         });
       };
     
+      setSignupSuccess = () => {
+          this.setState( { fireRedirect: true } );
+      }
+
       handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.email && this.state.username && this.state.password.length > 0 && this.state.confirmpassword.length > 0 && this.confirmPassword()) {
             console.log("Form success");
-            this.setState({ fireRedirect: true })
+           
             // React Redirect to Categories
+            this.setSignupSuccess();
 
-        axios.post('/signup', {
-            email: this.state.email,
-            username: this.state.username,
-            password: this.state.password
+        // axios.post('/users/signup', {
+        //     email: this.state.email,
+        //     username: this.state.username,
+        //     password: this.state.password
             
-            })
-            .then(function (response) {
-            console.log(response);
+        //     })
+        //     .then(function (response) {
+        //        this.setSignupSuccess(); 
+        //     console.log(response);
 
-            // React Redirect to Categories
-            })
-            .catch(function (error) {
-            console.log(error);
-            });
+        //     // React Redirect to Categories
+        //     })
+        //     .catch(function (error) {
+        //     console.log(error);
+        //     });
         }
         else {
             alert("Form is invalid")
