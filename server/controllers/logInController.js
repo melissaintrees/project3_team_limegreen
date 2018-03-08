@@ -18,15 +18,21 @@ function validateUser(userName, password, cb, res){
 
     con.query(sql, function (err, result) {
         if (err) throw err;
-        console.log('password: ' + result)
+        else if(result.length < 1){
+            cb(false, res, userName);
+        }
 
         let hash = result[0].password;
+        console.log('hash: ' + hash);
 
         bcrypt.compare(password, hash, function(err, doesMatch){
         if (err) throw err;
 
         if (doesMatch){
             cb(true, res, userName);
+        }
+        else{
+            cb(false, res, userName);
         }
         });
     });
