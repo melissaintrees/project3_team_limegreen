@@ -6,7 +6,7 @@ const AppHeader = props => (
         <div className="appheader">
             
             <h2 className="title2">
-               CODE STARS
+               CODE AQUARIUM
             </h2>
                 
         </div>
