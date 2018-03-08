@@ -5,9 +5,9 @@ const questionsController = require("../../controllers/questionsController");
 router.route("/")
   .get((req, res) => res.send('Hello World'));
 
-// Matches with "/api/questions/:id"
-router.route("/questions/:id")
-  .get(questionsController.tempQ)
-
+// Matches with "/api/questions/:category"
+router.get("/questions/:category", function(req, res){
+  questionsController.categoryQ(req, res);
+});
 
 module.exports = router;
