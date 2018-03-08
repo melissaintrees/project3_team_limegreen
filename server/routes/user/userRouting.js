@@ -25,20 +25,17 @@ router.post("/login", function(req, res) {
 });
 
 router.post("/signup", function(req, res) {
-    console.log(req.body.username);
-    console.log(req.body.password);
-    newUser(req.body.username, req.body.password, req.body.email, cb, res);
+    console.log('here0');
+    newUser(req.body.username, req.body.password, req.body.email, cbSignUp, res);
   });
-
-// router.post("/login", function (req, res) {
-//   console.log(req.body.username);
-//   console.log(req.body.password);
-//   newUser(req.body.username, req.body.password, cb, res);
-// });
 
 router.get("/userAccount/:token", function(req, res){
   verify(req.params.token);
 });
+
+function cbSignUp(result){
+  return result;
+}
 
 function cb(result, res, userName){
     let token = false;
@@ -60,11 +57,13 @@ function cb(result, res, userName){
         exp: Math.floor(Date.now() / 1000) + (60 * 60),
         data: userName,
       }, 'WeAreSparTans');
-      res.send(token);
+      console.log('Success')
+      console.log(token);
+      res.send(true);
     }
     else{
-      res.send('failed');
       console.log('Log in Failed')
+      res.send(false);
     }
 }
 

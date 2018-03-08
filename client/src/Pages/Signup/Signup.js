@@ -37,21 +37,21 @@ class Signup extends Component {
             // React Redirect to Categories
             this.setSignupSuccess();
 
-        // axios.post('/users/signup', {
-        //     email: this.state.email,
-        //     username: this.state.username,
-        //     password: this.state.password
+        axios.post('/users/signup', {
+            email: this.state.email,
+            username: this.state.username,
+            password: this.state.password
             
-        //     })
-        //     .then(function (response) {
-        //        this.setSignupSuccess(); 
-        //     console.log(response);
+            })
+            .then(function (response) {
+               this.setSignupSuccess(); 
+            console.log(response);
 
-        //     // React Redirect to Categories
-        //     })
-        //     .catch(function (error) {
-        //     console.log(error);
-        //     });
+            // React Redirect to Categories
+            })
+            .catch(function (error) {
+            console.log(error);
+            });
         }
         else {
             alert("Form is invalid")
