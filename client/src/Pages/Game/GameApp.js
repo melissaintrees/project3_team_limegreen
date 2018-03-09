@@ -87,7 +87,7 @@ class GameApp extends Component {
         axios.get('/api/questions/' + category)
             .then((response) => {
                 let questionsArray = [];
-                console.log(response);
+                console.log(response.data[0]);
                 for(let i = 0; i < response.data.length; i++){
                     let answers = [];
                     answers.push(response.data[i].answer1);
@@ -95,7 +95,7 @@ class GameApp extends Component {
                     answers.push(response.data[i].answer3);
                     answers.push(response.data[i].answer4);
                     let cat = response.data[i].category;
-                    let newSample = new Sample(cat, response.data[i].question, answers, response.data[i].correctAnswer);
+                    let newSample = new Sample(cat, response.data[i].question, answers, response.data[i].correct_answer);
                     questionsArray.push(newSample);
                 }
                 console.log(questionsArray);
