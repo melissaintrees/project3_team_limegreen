@@ -9,6 +9,15 @@ import PlayAgnBtn from '../../Components/PlayAgnBtn/PlayAgnBtn';
 import LogoutBtn from '../../Components/LogoutBtn/LogoutBtn';
 import ScoreComp from '../../Components/ScoreComp/ScoreComp';
 
+class Sample {
+    constructor(type, question, answerOptions, correctAnswer) {
+        this.type = type;
+        this.question = question;
+        this.answerOptions = answerOptions;
+        this.correctAnswer = correctAnswer;
+    };
+}
+
 // GameApp runs game logic
 class GameApp extends Component {
     constructor(props) {
@@ -27,9 +36,9 @@ class GameApp extends Component {
 
 
     componentDidMount = () => {
-        this.setState({
-            questions: cssCategory.questions,
-        })
+        console.log(this.props);
+        console.log(this.props.location.category);
+        this.getAnswer(this.props.location.category);
     };
 
 
@@ -71,20 +80,33 @@ class GameApp extends Component {
             });
         };
 
-    // getAnswer = () => {
-    //     axios.get('https://mysterious-bastion-34346.herokuapp.com/api/questions/' + 2)
-    //         .then((response) => {
-    //             console.log(response);
-    //             this.setState({
-    //                 question: response.data[0].questions,
-    //                 answer: response.data[0].answer0,
-    //                 answerState: this.state.answerState++
-    //             });
-    //         })
-    //         .catch(function (error) {
-    //             console.log(error);
-    //         });
-    // };
+    
+
+    getAnswer = (category) => {
+        console.log('get answer running');
+        axios.get('/api/questions/' + category)
+            .then((response) => {
+                let questionsArray = [];
+                console.log(response);
+                for(let i = 0; i < response.data.length; i++){
+                    let answers = [];
+                    answers.push(response.data[i].answer1);
+                    answers.push(response.data[i].answer2);
+                    answers.push(response.data[i].answer3);
+                    answers.push(response.data[i].answer4);
+                    let cat = response.data[i].category;
+                    let newSample = new Sample(cat, response.data[i].question, answers, response.data[i].correctAnswer);
+                    questionsArray.push(newSample);
+                }
+                console.log(questionsArray);
+                this.setState({
+                    questions: questionsArray,
+                });
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
 
     render_questions() {
 

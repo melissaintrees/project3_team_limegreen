@@ -144,7 +144,8 @@ class Signup extends Component {
                                                 />
                                                     
                                                 {fireRedirect && (
-                                                    <Redirect to={'/categories'} />
+                                                    <Redirect to={{
+                                                        pathname: '/categories'}} />
                                                 )}
                                         </div><div>
                                         </div>

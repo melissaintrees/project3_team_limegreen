@@ -16,15 +16,11 @@ module.exports = {
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true);
     
-    console.log(req);
 
     let sql = `SELECT * FROM questions WHERE category="${req.params.category}"`
 
-    console.log(sql);
-
     con.query(sql, function (err, result) {
         if (err) throw err;
-
         res.json(result);
     });
   },
