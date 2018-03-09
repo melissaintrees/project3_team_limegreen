@@ -4,6 +4,9 @@ import Input from '../../Components/Input/Input';
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
+     
+import { Route, Redirect } from 'react-router'
 // https://javascriptexamples.info/code/react-router-v4-redirect/
 // >>>>>>> a913fa0d1f7e17e33b724400dd56f9606fedf3ac
 
@@ -14,6 +17,7 @@ class Login extends Component {
         this.state = {
             username: "",
             password: "",
+            redirect: false,
         };
     }
 
@@ -28,23 +32,27 @@ class Login extends Component {
         event.preventDefault();
         if (this.state.username && this.state.password) {
             console.log("Form Success");
-            // React Redirect to Scores
-            
+            // React Redirect to Scores  
+        let that = this;
         axios.post('/users/login', {
-            username: this.state.username,
-            password: this.state.password
+            username: that.state.username,
+            password: that.state.password
             })
             .then(function (response) {
-                if (response == true){
-                    this.props.history.push('/scoretwo');
-                } else {
-                    console.log("have you signed up yet?");
+                console.log(response);
+                //React Redirect to Scores
+                if(response.data){
+                    console.log('welinkin');
+                    that.setState({
+                        redirect: true
+                    })
                 }
-            console.log(response);
-            //React Redirect to Scores
+                else{
+                    alert('Incorrect password');
+                }
             })
             .catch(function (error) {
-            console.log(error);
+                console.log(error);
             });
         }
         else {
@@ -54,6 +62,9 @@ class Login extends Component {
 
     render() {
         return (
+            this.state.redirect ?
+            <Redirect to="/categories" />
+            :
             <div>
                  {/* html for the login form: */}
                 <div className="container">
