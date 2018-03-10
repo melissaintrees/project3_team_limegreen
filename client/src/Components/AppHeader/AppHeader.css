@@ -1,18 +1,22 @@
 
 .appheader {
-    background-color: #ffd93c;
+    background-color: #6cdeff;
     padding: 15px;
     
 }
 
 .title2 {
-    color: dodgerblue;
+    color: #00778d;
     font-size: 26px;
     font-weight: bold;
     text-align: center;
 }
 
-.signup-content-div,
+.signup-content-div {
+    background-color: #00778d;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .score-content-div {
     background-color: #2b3e5c;
     padding-top: 20px;
@@ -20,7 +24,7 @@
 }
 
 .sign-up-bg {
-    background-color: #fd721b;
+    background-color: #00a3d3;
     margin: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -36,7 +40,7 @@
 }
 
 .login-bg {
-    background-color: #ffd93c;
+    background-color: #6cdeff;
     margin: 30px;
     padding-top: 142px;
     padding-bottom: 142px;

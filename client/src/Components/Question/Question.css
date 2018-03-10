@@ -1,11 +1,11 @@
 
 /* game components styles */
 .card-sty {
-    background-color: #ffd93c;
+    background-color: #6cdeff;
 }
 
 .qtxt {
-    color: #4d81c3;
+    color: #006351;
     font-weight: bold;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .btn-answer2 {
-    background-color: #fa3949;
+    background-color: #f97171;
 }
 
 .btn-answer3 {
@@ -34,7 +34,7 @@
 }
 
 .btn-answer4 {
-    background-color: #fd721b;
+    background-color: #00a3d3;
 }
 
 .categ-content-div {

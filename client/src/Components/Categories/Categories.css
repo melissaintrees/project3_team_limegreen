@@ -1,8 +1,8 @@
 .btn-html {
-    background-color: #ffd93c;
+    background-color: #6cdeff;
     font-weight: bold;
     color: #2b3e5c;
-    font-size: 16px;
+    font-size: 22px;
     width: 90%;
     padding: 50px;
     border-radius: 5px;
@@ -12,10 +12,10 @@
 }
 
 .btn-css {
-    background-color: #f17934;
+    background-color: #00a3d3;;
     font-weight: bold;
     color: #2b3e5c;
-    font-size: 16px;
+    font-size: 22px;
     width: 90%;
     padding: 50px;
     border-radius: 5px;
@@ -24,10 +24,10 @@
 }
 
 .btn-algo {
-    background-color: #fa3949;
+    background-color: #00778d;
     font-weight: bold;
     color: #2b3e5c;
-    font-size: 16px;
+    font-size: 22px;
     width: 90%;
     padding: 50px;
     border-radius: 5px;
@@ -53,4 +53,18 @@
 .categ-content-div h5 {
     font-size: 20px;
     font-weight: bold;
+}
+
+.jelly {
+    height: 160px;
+    width: 250;
+}
+
+.seahorse {
+    height: 160px;
+}
+
+.anglerfish {
+    height: 140px;
+    width: 190px;
 }

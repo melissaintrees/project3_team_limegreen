@@ -1,22 +1,22 @@
 header {
-    background-color: #2b3e5c;
+    background-color: #00778d;
     text-align: center;
     padding: 15px;
     margin: 0;
 }
 
 .welcome {
-    color: #ffd93c;
+    color: #6cdeff;
     font-size: 20px;
 }
 
 .title {
-    color: #fa3949;
+    color: #f99a07;
     font-size: 26px;
 }
 
 .tagline {
-    color: #4d81c3;
+    color: #fede0e;
     font-size: 24px;
 }
 

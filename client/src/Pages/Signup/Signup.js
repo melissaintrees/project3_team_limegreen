@@ -4,6 +4,7 @@ import ContinueBtn from '../../Components/ContinueBtn/ContinueBtn';
 import Input from '../../Components/Input/Input';
 import axios from 'axios';
 import { Redirect } from "react-router-dom";
+import signupModal from '../../Components/signupModal/signupModal';
 
 class Signup extends Component {    
     constructor(props) {
@@ -54,7 +55,9 @@ class Signup extends Component {
             });
         }
         else {
-            alert("Form is invalid")
+        //     render
+        //    <signupModal
+        //    />
         }
       };
 

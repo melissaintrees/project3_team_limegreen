@@ -6,7 +6,7 @@ const Header = () => (
     <header className="border">
         <h2 className="welcome">Welcome to
             <br></br>
-            <span className="title">CODESTARS</span>
+            <span className="title">CODE AQUARIUM</span>
             <br></br>
             <span className="tagline">Play Games. Learn to Code.</span>
         </h2>
