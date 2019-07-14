@@ -24,7 +24,10 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
   "devDependencies": {
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+
+  "macaddress": ">=0.2.9"
+
   },
   "author": "",
   "license": "ISC"
