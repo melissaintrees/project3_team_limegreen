@@ -23,7 +23,7 @@
     margin-right: auto;
 }
 
-.btn-loops {
+.btn-algo {
     background-color: #fa3949;
     font-weight: bold;
     color: #2b3e5c;
@@ -42,4 +42,15 @@
 .img-div-categ {
     width: 25%;
     float: left;
+}
+
+.categ-content-div {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.categ-content-div h5 {
+    font-size: 20px;
+    font-weight: bold;
 }

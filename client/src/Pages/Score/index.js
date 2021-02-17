@@ -1,1 +1,1 @@
-export { default } from "./Score.js";
+export { default } from "./Score";

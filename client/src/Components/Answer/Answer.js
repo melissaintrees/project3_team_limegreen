@@ -1,24 +1,23 @@
 import React from 'react';
 import "./Answer.css"
-//answer extend component and pass in props
-
-// import PropTypes from 'prop-types';
-// import cssCategory from '../../mockdata/questions';
 
 // Answer component for quiz. Creates radio button selection.
-const Answer = props => {
+const Answer = (props) => {
+    const questionGroup = `${props.questionIndex}`;
+    this.questionGroup = props.questionIndex;
     return (
     <div className="answerOption">
         <ul>
                 <input
                 type="radio"
                 className="radioCustomButton"
-                name="radioGroup"
-                // onClick={handleAnswerClick}
+                name={questionGroup}
+                onChange={props.userSelectionClick}
+                value={props.answerOptions}
                 >
                 </input>
             <label className="radioCustom">
-                {props.answers}
+                {props.answerOptions}
             </label>
         </ul>
     </div>
